@@ -17,7 +17,7 @@ The skill ran privately from 2026-08-31 to 2026-10-10 on one machine and one des
 
 ## Decision
 
-- The skill folder holds only what every user shares: SKILL.md, `references/methodology.md` (the checklist a refresh edits), `references/fetch-routes.md` (retrieval lessons as rules), `references/explaining.md` (glossary and analogies), the script, and the evergreen companions.
+- The skill folder holds only what every user shares: SKILL.md, `skills/science-study-evaluator/references/methodology.md` (the checklist a refresh edits), `skills/science-study-evaluator/references/fetch-routes.md` (retrieval lessons as rules), `skills/science-study-evaluator/references/explaining.md` (glossary and analogies), the script, and the evergreen companions.
 - Each user's appraisals, verdict log and an optional `reader.md` live in their own folder: `SSE_HOME`, default `~/.science-study-evaluator/`. The reader profile replaces the original's hard-coded "the reader has a CS background", so the computing analogies stay available without being assumed.
 - `paper_meta.py` takes the contact email from `--email` or `SSE_EMAIL` and skips Unpaywall without one, rather than shipping anyone's address. It gained `--fulltext` because the fastest full-text route (Europe PMC fullTextXML) returns 9,000-word articles that are cheaper grepped than read.
 - Lessons about one machine's remote-shell quoting and one app's skill-save flow stayed in the private unit; their LEARNINGS numbers are left as gaps so the public entries keep their original ids.
