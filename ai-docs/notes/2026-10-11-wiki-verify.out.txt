@@ -1,0 +1,183 @@
+installed: v0.1.0 from https://github.com/m4bwav/science-study-evaluator.git
+python: 3.14.4
+
+== case: version
+$ python3 paper_meta.py --version
+paper_meta.py 0.1.0
+$ echo $?
+0
+
+== case: help
+$ python3 paper_meta.py --help
+usage: paper_meta.py [-h] [--refs] [--similar SIMILAR] [--fulltext DIR]
+                     [--json] [--email EMAIL] [--timeout TIMEOUT] [--version]
+                     identifier
+
+paper_meta.py: one-call metadata pull for appraising a scientific paper.
+
+positional arguments:
+  identifier         DOI, doi.org or article URL, PMID:123 or PMC123
+
+options:
+  -h, --help         show this help message and exit
+  --refs
+  --similar SIMILAR
+  --fulltext DIR
+  --json
+  --email EMAIL
+  --timeout TIMEOUT
+  --version          show program's version number and exit
+$ echo $?
+0
+
+== case: first run
+$ python3 paper_meta.py 10.1073/pnas.2528246123 --email you@example.org --similar 3
+== CROSSREF
+Title: Protecting episodic memory after sleep loss: Similar benefits of exercise and naps via distinct neural contributions
+Journal: Proceedings of the National Academy of Sciences | Publisher: National Academy of Sciences | Type: journal-article
+DOI: 10.1073/pnas.2528246123 | Published: 2026-08-07 | Online: 2026-08-07
+  received: 2025-10-06
+  accepted: 2026-06-23
+  published: 2026-08-07
+Authors:
+  - Madhura S. Lotlikar  [Department of Neurology and Neurosurgery, McGill University; Memory and Motor Rehabilitation Laboratory, Jewish Rehabilitation Hospital; Feil and Oberfeld Research Centre, Jewish Rehabilitation Hospital, Center for Interdisciplinary Research in Rehabilitation]
+  - Beatrice Ayotte  [Department of Neurology and Neurosurgery, McGill University; Memory and Motor Rehabilitation Laboratory, Jewish Rehabilitation Hospital; Feil and Oberfeld Research Centre, Jewish Rehabilitation Hospital, Center for Interdisciplinary Research in Rehabilitation]
+  - Amy Choi  [Department of Neurology and Neurosurgery, McGill University; Memory and Motor Rehabilitation Laboratory, Jewish Rehabilitation Hospital]
+  - Freddie Seo  [Memory and Motor Rehabilitation Laboratory, Jewish Rehabilitation Hospital]
+  - Edwin M. Robertson  [Department of Brain and Cognitive Sciences, Institute of Neuroscience and Psychology, University of Glasgow; Center for Information and Neural Networks, National Institute of Information and Communications Technology]
+  - Fabien Dal Maso  [École de Kinésiologie et des Sciences de l’Activité Physique, Faculté de Médecine, Université de Montréal; Centre Interdisciplinaire de Recherche sur le Cerveau et l’Apprentissage]
+  - Marc Roig  [Memory and Motor Rehabilitation Laboratory, Jewish Rehabilitation Hospital; Feil and Oberfeld Research Centre, Jewish Rehabilitation Hospital, Center for Interdisciplinary Research in Rehabilitation; Department of School of Physical and Occupational Therapy, Faculty of Medicine and Health Sciences, McGill University]
+Funders: Natural Sciences and Engineering Research Council of Canada; FRQ | Santé
+License: https://creativecommons.org/licenses/by-nc-nd/4.0/
+Abstract (Crossref): Sleep loss is a public health concern requiring widely accessible cost-effective interventions to counteract the cognitive and brain health impairments caused by it. Sleep loss impairs the brain’s capacity to form new episodic memories, which is critical for everyday cognition, future planning, and decision-making. In this study, we compared the protective effect of a 20-min exercise and a 90-min nap against a no-intervention control condition on the capacity to encode episodic memory after 30 h of uninterrupted wakefulness and examined underlying neural mechanisms using electroencephalography. Both exercise and nap preserved episodic memory after sleep loss, with an average of 22% higher memory performance than the control condition. Electroencephalography revealed distinct neural mechanisms within the intervention groups, which significantly contributed to memory performance. After napping, the brain-state markers of neural fatigue and sleep pressure determined memory performance more than episodic memory markers and after exercise, only episodic memory markers significantly contributed to memory performance. In contrast, in the control group, none of these markers explained memory performance. Instead, those markers were associated with fatigue, suggesting compensatory neural efforts. Consistent with the principle of neural degeneracy, in which different brain mechanisms can yield similar outcomes, after sleep loss exercise facilitates efficient neural processing while napping makes the brain state conducive to new learning. These results warrant implementation studies within safety-critical occupations such as healthcare, shiftwork, mining, and transportation, where implementing sleep hygiene recommendations to counteract sleep loss is not effective or practical, but preserving brain and cognitive health is of global importance.
+References deposited: 135
+== UNPAYWALL
+is_oa: True | oa_status: hybrid
+  OA: publisher publishedVersion https://doi.org/10.1073/pnas.2528246123
+  OA: repository acceptedVersion https://www.medrxiv.org/content/medrxiv/early/2025/08/22/2025.08.19.25333837.full.pdf
+== PUBMED
+PMID: 42566467 | PMCID: PMC13462932 | Types: Journal Article, Research Support, Non-U.S. Gov't
+Abstract (PubMed):
+  Sleep loss is a public health concern requiring widely accessible cost-effective interventions to counteract the cognitive and brain health impairments caused by it. Sleep loss impairs the brain's capacity to form new episodic memories, which is critical for everyday cognition, future planning, and decision-making. In this study, we compared the protective effect of a 20-min exercise and a 90-min nap against a no-intervention control condition on the capacity to encode episodic memory after 30 h of uninterrupted wakefulness and examined underlying neural mechanisms using electroencephalography. Both exercise and nap preserved episodic memory after sleep loss, with an average of 22% higher memory performance than the control condition. Electroencephalography revealed distinct neural mechanisms within the intervention groups, which significantly contributed to memory performance. After napping, the brain-state markers of neural fatigue and sleep pressure determined memory performance more than episodic memory markers and after exercise, only episodic memory markers significantly contributed to memory performance. In contrast, in the control group, none of these markers explained memory performance. Instead, those markers were associated with fatigue, suggesting compensatory neural efforts. Consistent with the principle of neural degeneracy, in which different brain mechanisms can yield similar outcomes, after sleep loss exercise facilitates efficient neural processing while napping makes the brain state conducive to new learning. These results warrant implementation studies within safety-critical occupations such as healthcare, shiftwork, mining, and transportation, where implementing sleep hygiene recommendations to counteract sleep loss is not effective or practical, but preserving brain and cognitive health is of global importance.
+COI: Competing interests statement:The authors declare no competing interest.
+Grants: FRQ | Santé (FRQS); Natural Sciences and Engineering Research Council of Canada (NSERC)
+Similar articles (top 3):
+  - PMID 42475469 | Gallios JM |  2026 Jan | Personality Theories.
+  - PMID 23002951 | Mulrine HM | Chronobiol Int 2012 Nov | Post-sleep inertia performance benefits of longer naps in simulated nightwork and extended operations.
+  - PMID 32179655 | Ashton JE | Learn Mem 2020 Apr | Sleep deprivation induces fragmented memory loss.
+== NEXT
+Full text: fetch https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13462932/fullTextXML (one call, the whole article), or rerun with --fulltext DIR.
+Scan the similar articles for a companion paper from the same sample or a contradicting design (sibling comparison, negative control).
+$ echo $?
+0
+
+== case: full text
+$ python3 paper_meta.py 10.1073/pnas.2528246123 --similar 0 --fulltext papers | tail -n 3
+Grants: FRQ | Santé (FRQS); Natural Sciences and Engineering Research Council of Canada (NSERC)
+== NEXT
+Full text saved: grep papers/PMC13462932.txt (8943 words) instead of reading it whole.
+$ echo $?
+0
+$ ls papers
+PMC13462932.txt
+PMC13462932.xml
+$ echo $?
+0
+$ grep -n "^## " papers/PMC13462932.txt
+3:## Significance
+7:## Abstract
+35:## Results
+146:## Discussion
+170:## Materials and Methods
+216:## Supplementary Material
+218:## Author contributions
+222:## Competing interests
+228:## Data, Materials, and Software Availability
+232:## Supporting Information
+$ echo $?
+0
+$ grep -n -i "competing" papers/PMC13462932.txt
+222:## Competing interests
+224:The authors declare no competing interest.
+$ echo $?
+0
+
+== case: closed paper, no email
+$ python3 paper_meta.py 10.1111/jssr.70101 --similar 0 | grep -v '^Abstract'
+== CROSSREF
+Title: Cognitive Ability and Christian Nationalism
+Journal: Journal for the Scientific Study of Religion | Publisher: Wiley | Type: journal-article
+DOI: 10.1111/jssr.70101 | Published: 2026-09-11 | Online: 2026-09-11
+  received: 2026-06-07
+  accepted: 2026-08-21
+  published: 2026-09-11
+Authors:
+  - Samuel L. Perry  [Department of Sociology University of Oklahoma  Norman Oklahoma USA]
+License: http://onlinelibrary.wiley.com/termsAndConditions#vor
+References deposited: 77
+== UNPAYWALL
+skipped: no contact email (pass --email or set SSE_EMAIL)
+== PUBMED
+no PMID (too new, or the journal is not indexed in PubMed)
+== NEXT
+Open-copy check skipped (no email): rerun with --email or SSE_EMAIL, or try the publisher page; if it stays closed, grade at abstract level and say so.
+$ echo $?
+0
+
+== case: retracted paper
+$ python3 paper_meta.py 10.1057/s41599-025-04787-y --similar 0 --email you@example.org | grep -E '^(Title|!!|== |INTEGRITY|PMID)'
+== CROSSREF
+Title: RETRACTED ARTICLE: The effect of ChatGPT on students’ learning performance, learning perception, and higher-order thinking: insights from a meta-analysis
+!! updated by: retraction 10.1057/s41599-026-07310-z (publisher 2026-04-22)
+!! updated by: retraction 10.1057/s41599-026-07310-z (retraction-watch 2026-04-22)
+== UNPAYWALL
+== PUBMED
+== NEXT
+INTEGRITY NOTICE on this record: read it before anything else.
+$ echo $?
+0
+
+== case: bad input
+$ python3 paper_meta.py "not a doi"
+error: no DOI, PMID or PMCID found in 'not a doi'
+$ echo $?
+2
+
+== case: bad input streams
+stdout: (empty)
+stderr: error: no DOI, PMID or PMCID found in 'not a doi'
+exit: 2
+
+== case: identifier forms
+$ python3 paper_meta.py https://onlinelibrary.wiley.com/doi/full/10.1111/jssr.70101 --similar 0 --json | python3 -c "import json,sys; print(json.load(sys.stdin)['doi'])"
+10.1111/jssr.70101
+$ echo $?
+0
+$ python3 paper_meta.py PMID:42566467 --similar 0 --json | python3 -c "import json,sys; print(json.load(sys.stdin)['doi'])"
+10.1073/pnas.2528246123
+$ echo $?
+0
+$ python3 paper_meta.py PMC13462932 --similar 0 --json | python3 -c "import json,sys; print(json.load(sys.stdin)['doi'])"
+10.1073/pnas.2528246123
+$ echo $?
+0
+
+== case: recipe: json fields
+Proceedings of the National Academy of Sciences
+{'received': '2025-10-06', 'accepted': '2026-06-23', 'published': '2026-08-07'}
+Competing interests statement:The authors declare no competing interest.
+Full text: fetch https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13462932/fullTextXML (one call, the whole article), or rerun with --fulltext DIR.
+
+== case: recipe: several DOIs
+Title: Protecting episodic memory after sleep loss: Similar benefits of exercise and naps via distinct neural contributions
+Title: Cognitive Ability and Christian Nationalism
+Title: RETRACTED ARTICLE: The effect of ChatGPT on students’ learning performance, learning perception, and higher-order thinking: insights from a meta-analysis
+!! updated by: retraction 10.1057/s41599-026-07310-z (publisher 2026-04-22)
+!! updated by: retraction 10.1057/s41599-026-07310-z (retraction-watch 2026-04-22)
+
+== case: unit tests
+$ python3 tests/test_paper_meta.py 2>&1 | tail -n 1
+OK (skipped=1)
+$ echo $?
+0
+

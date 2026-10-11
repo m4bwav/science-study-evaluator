@@ -12,6 +12,9 @@ Watch the first CI run on main and fix anything red.
 
 ## Later
 
+- Wiki live for 0.1.0 (10 pages); update it at each release: ai-docs/notes/2026-10-11-github-wiki.md.
+- Next release: add argparse help text to paper_meta.py options (wiki note, inaccuracy 1).
+
 - Untested routes: Claude Desktop / claude.ai upload, Copilot, Codex, and the no-Python fallback. Run the trigger cases there when convenient.
 - Refresh due 2026-10-30 (evergreen.json).
 
