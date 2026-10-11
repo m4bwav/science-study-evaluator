@@ -1,6 +1,6 @@
 # Study Appraisal Methodology (living document)
 
-Version: 2026-10-01.1 · Read by [SKILL.md](../SKILL.md) at Step 1 of every appraisal. Kept separate so a
+Version: 2026-10-11.1 · Read by [SKILL.md](../SKILL.md) at Step 1 of every appraisal. Kept separate so a
 refresh can change the checklist without touching the skill. Schedule in `evergreen.json`, findings in
 [RESEARCH.md](../RESEARCH.md), every change in [CHANGELOG.md](../CHANGELOG.md); retrieval routes in
 [fetch-routes.md](fetch-routes.md).
@@ -134,6 +134,26 @@ refresh can change the checklist without touching the skill. Schedule in `evergr
   vanish into one number), and whatever the control misses leaks into the exposure's coefficient.
   So "persists after controlling for education" is a fair claim, while "not reducible to
   education" is a stronger one the design can't make. Watch for that upgrade in abstracts.
+- N-of-1 self-tracking (wellness videos and posts: one person's repeated lab tests read against a
+  diet or habit log, with population studies borrowed to set targets). Grade the cited studies and
+  the personal analysis separately; the first can be solid while the second is weak. Check:
+  (a) Matrix and units. Are the personal numbers measured on the same sample type and assay as the
+  population cut-off? Finger-prick or dried whole blood is not venous plasma (whole-blood
+  tryptophan runs near half the plasma value). If every personal point falls past a population
+  extreme, suspect the matrix before the biology.
+  (b) Time is the confounder. Over a few years, age and calendar date are one variable, so a
+  personal trend called "age-related" also carries kit, lab and handling changes and every habit
+  that drifted. Compare the slope to the cited population aging slope; one many times faster is
+  not aging. Any input that trended will correlate with a trending outcome, so ask whether the model
+  includes test date or detrends.
+  (c) Count the inputs screened. A food log plus an app's nutrient totals is dozens to hundreds of
+  tests against 20-30 blood draws; at p < 0.05, about 5 hits per 100 inputs come from noise. If the
+  count isn't given, say the hit list can't be judged.
+  (d) Home-made indices. A ratio whose denominator is the headline variable restates it; a rising
+  ratio "supporting" a falling denominator is the same evidence counted twice. Ask whether the index
+  was ever validated against a direct measure.
+  (e) The seller of the measurement. When the presenter earns from the test kit or the tracking app,
+  say so even when it's disclosed; it predicts that the measurement gets read as finding a problem.
 
 ## 4. Sample & measurement
 - N per group, especially controls. In pooled/multi-cohort studies, check whether the
@@ -225,6 +245,9 @@ refresh can change the checklist without touching the skill. Schedule in `evergr
 ## Changelog
 Full history with reasons: [CHANGELOG.md](../CHANGELOG.md). The C- ids below were assigned before the
 skill was published; the public changelog summarises them under its first entry.
+- 2026-10-11 (v8): §3 n-of-1 self-tracking branch (matrix and units vs the population cut-off,
+  time as the confounder, count the inputs screened, home-made indices, the seller of the
+  measurement). Source: C-20261011-2.
 - 2026-10-01 (v7): §3 coarse controls leave residual confounding ("persists after" vs "not
   reducible to"). §4 ability/knowledge exposures (vocabulary is crystallized, reverse path via
   subculture, check fluid measures and their n) and single-item outcomes standing in for a

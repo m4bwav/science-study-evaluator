@@ -4,6 +4,11 @@ Every change to [SKILL.md](SKILL.md), the references, the script and the compani
 
 Entry shape: `### C-YYYYMMDD-n · date · one-line summary`, then `because:` (IDs or "user request"), `files:` (file and section), and a sentence on what changed. Cite section headings, not line numbers.
 
+### C-20261011-2 · 2026-10-11 · Methodology v8: n-of-1 self-tracking branch; YouTube fetch route
+- because: L-012; gap found appraising a health video that read one person's 26 home metabolomics tests against two published cohort studies
+- files: references/methodology.md §3, §Changelog (version 2026-10-11.1); references/fetch-routes.md Known blocks; LEARNINGS.md L-012
+- The checklist had no branch for personal lab data read against borrowed population cut-offs. In the case that exposed it, all 26 whole-blood microsample tryptophan values (19-44 µM) were graded against a plasma mortality curve whose median was 67 µM, a three-year decline about 20 times the cited aging slope was called aging, and a diet screen of an unstated number of inputs had no multiplicity correction or time adjustment. The new branch covers matrix and units, time as the confounder, the input count, home-made ratio indices and a presenter who sells the measurement. fetch-routes.md gains the YouTube route, since the citations were only on the slides.
+
 ### C-20261011-1 · 2026-10-11 · 0.1.0: first public release
 - because: user request (publish the skill for anyone to install, modernised); L-002, L-009
 - files: everything

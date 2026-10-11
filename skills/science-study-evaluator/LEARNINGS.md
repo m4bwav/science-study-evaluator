@@ -69,3 +69,11 @@ Entries before 2026-10-11 come from the skill's private use and keep their origi
 - Evidence: the 2026-10-01 appraisal
 - Scope: environment
 - Status: active · helpful 1 · harmful 0 · last_confirmed 2026-10-01
+
+### L-012 · 2026-10-11 · YouTube videos: read the slides, not just the transcript
+- Trigger: the user asked for an appraisal of a 22-minute health video. The auto-transcript never named the two cited papers; only the slides did ("Adapted from ... 2025", "... 2016"), along with the measurement units, the coefficient tables and slide statistics that turned out not to reconcile. The decisive finding (home whole-blood values graded against plasma cut-offs) came from the units on a slide.
+- Hypothesis: talking-head science videos put citations and numbers on screen, not in speech, so a transcript alone can't verify sources.
+- Rule: get the transcript and description with yt-dlp, then pull about a dozen frames with ffmpeg at the timestamps where the transcript describes a chart, and read them as images. Route in references/fetch-routes.md.
+- Evidence: the 2026-10-11 appraisal (both citations and the whole-blood unit range came only from frames)
+- Scope: environment
+- Status: active · helpful 1 · harmful 0 · last_confirmed 2026-10-11
