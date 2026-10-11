@@ -1,0 +1,26 @@
+{
+  "name": "science-study-evaluator",
+  "version": "0.1.0",
+  "description": "Check whether a scientific study, or the news story about it, holds up: verify the citation, read the paper itself, check conflicts of interest, measure how far the headline outruns the findings, and get a five-level verdict with the reasoning explained in plain language. Ships a standard-library Python script that pulls Crossref, Unpaywall, PubMed and Europe PMC in one call. Evergreen: the appraisal checklist refreshes itself from primary sources.",
+  "author": {
+    "name": "Mark Rogers"
+  },
+  "license": "MIT",
+  "keywords": [
+    "science",
+    "research",
+    "fact-checking",
+    "critical-appraisal",
+    "evidence-based-medicine",
+    "pubmed",
+    "crossref",
+    "agent-skills",
+    "evergreen"
+  ],
+  "skills": "./skills",
+  "repository": "https://github.com/m4bwav/science-study-evaluator",
+  "homepage": "https://github.com/m4bwav/science-study-evaluator",
+  "documentationUrl": "https://github.com/m4bwav/science-study-evaluator#readme",
+  "supportUrl": "https://github.com/m4bwav/science-study-evaluator/issues",
+  "privacyPolicyUrl": "https://github.com/m4bwav/science-study-evaluator#privacy"
+}

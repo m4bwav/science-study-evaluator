@@ -1,0 +1,16 @@
+{
+  "name": "science-study-evaluator",
+  "owner": {
+    "name": "Mark Rogers"
+  },
+  "metadata": {
+    "description": "Is this study legit? Critical appraisal of papers and science news"
+  },
+  "plugins": [
+    {
+      "name": "science-study-evaluator",
+      "source": "./",
+      "description": "Check whether a scientific study, or the news story about it, holds up: verify the citation, read the paper itself, check conflicts of interest, measure how far the headline outruns the findings, and get a five-level verdict with the reasoning explained in plain language. Ships a standard-library Python script that pulls Crossref, Unpaywall, PubMed and Europe PMC in one call. Evergreen: the appraisal checklist refreshes itself from primary sources."
+    }
+  ]
+}

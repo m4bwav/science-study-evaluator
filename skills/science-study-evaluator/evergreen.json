@@ -1,0 +1,68 @@
+{
+  "evergreen": "1.0",
+  "name": "science-study-evaluator",
+  "kind": "skill",
+  "main": "SKILL.md",
+  "files": {
+    "research": "RESEARCH.md",
+    "changelog": "CHANGELOG.md",
+    "learnings": "LEARNINGS.md",
+    "tests": "TESTS.md"
+  },
+  "protocol": "MAINTENANCE.md",
+  "source": null,
+  "topic": "critical appraisal of scientific studies and science journalism: reporting guidelines (CONSORT, PRISMA, STROBE, COREQ/SRQR), risk-of-bias and certainty tools (RoB 2, ROBINS-I, GRADE), metascience and replication, research-integrity and paper-mill/AI-fabrication detection, predatory-journal patterns, retraction tracking",
+  "tier": "moderate",
+  "interval_days": 30.0,
+  "last_checked": "2026-09-30",
+  "next_due": "2026-10-30",
+  "verify_at_use": false,
+  "volatile_claims": [],
+  "contradiction": null,
+  "events": [],
+  "streak": {
+    "quiet": 0,
+    "pinned_min": 0,
+    "pinned_max": 0,
+    "vau_quiet": 0
+  },
+  "history": [
+    {
+      "date": "2026-08-31",
+      "m": null,
+      "interval_after": 30,
+      "note": "Initial baseline (migrated from state.json, interval 30, old bounds 7/120): CONSORT 2025, GRADE Book/GRADErater transition, ROBINS-I v2 (2025), Cochrane Methods Report 2025, paper-mill detection landscape 2025-26"
+    },
+    {
+      "date": "2026-09-30",
+      "m": 0.25,
+      "interval_after": 30.0,
+      "note": "Scheduled refresh R-20260930-1: RW data via Crossref API; CONSORT NI-equivalence extension still in development; NIH replication initiative; Hijacked Journal Checker. In-use methodology v6 from SWITCH appraisal: C-20260930-1"
+    },
+    {
+      "date": "2026-10-11",
+      "m": null,
+      "interval_after": 30.0,
+      "note": "published as m4bwav/science-study-evaluator 0.1.0 (portable SKILL.md, references, paper_meta.py rewrite, tests, evals); not a research check, next_due unchanged"
+    }
+  ],
+  "counts": {
+    "learnings": 7,
+    "changes": 1,
+    "research": 4,
+    "tests": 1
+  },
+  "consolidate_every": 25,
+  "tests": {
+    "last_run": "2026-10-11T09:00",
+    "harness": "claude plugin eval + unittest",
+    "env": "Windows 11 native (trigger, decoy) + WSL2 Ubuntu (action)",
+    "cases": 6,
+    "passed": 6,
+    "failed": 0,
+    "failing": [],
+    "last_failure": null,
+    "research_after_days": null
+  },
+  "version": "0.1.0"
+}

@@ -1,0 +1,40 @@
+# Runs the offline test suite on the three operating systems the script promises, on the oldest and newest
+# Python it supports, so a change that only works on the author's machine cannot land unnoticed. The live job
+# calls the real APIs once a week and on demand, which catches an API changing its response shape.
+name: tests
+on:
+  push:
+    branches: [main]
+  pull_request:
+  schedule:
+    - cron: "17 6 * * 1"
+  workflow_dispatch:
+jobs:
+  suite:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+        python: ["3.10", "3.14"]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: ${{ matrix.python }}
+      - name: unit tests (offline)
+        run: python tests/test_paper_meta.py
+      - name: the script answers from a clean checkout
+        run: python skills/science-study-evaluator/scripts/paper_meta.py --version
+  live:
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    env:
+      SSE_LIVE: "1"
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.14"
+      - name: live smoke test against Crossref, PubMed and Europe PMC
+        run: python tests/test_paper_meta.py

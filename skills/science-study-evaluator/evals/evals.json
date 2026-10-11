@@ -1,0 +1,55 @@
+{
+  "skill": "science-study-evaluator",
+  "_format": "skill-creator evals.json plus evergreen fields (kind, decoy, evidence, baseline); extra fields are ignored by skill-creator's runner. Rules: protocol/TESTING.md. The runnable copies are the case folders in the repository's root evals/ (claude plugin eval format).",
+  "evals": [
+    {
+      "id": "trigger-1",
+      "kind": "trigger",
+      "prompt": "saw this on my feed, is it legit? https://www.psypost.org/a-20-minute-workout-protects-memory-after-sleep-loss-just-as-well-as-a-90-minute-nap/",
+      "expectations": ["the science-study-evaluator skill is invoked"],
+      "runs": 3
+    },
+    {
+      "id": "trigger-2",
+      "kind": "trigger",
+      "prompt": "my mom sent me an article saying diet soda is as good as water for losing weight, based on some big trial. does the study actually show that?",
+      "expectations": ["the science-study-evaluator skill is invoked"],
+      "runs": 3
+    },
+    {
+      "id": "trigger-3",
+      "kind": "trigger",
+      "prompt": "can you appraise this paper for me, doi 10.1111/dmcn.70512, everyone says it proves tylenol in pregnancy is safe",
+      "expectations": ["the science-study-evaluator skill is invoked"],
+      "runs": 3
+    },
+    {
+      "id": "decoy-1",
+      "kind": "trigger",
+      "decoy": true,
+      "prompt": "help me tighten the methods section of my manuscript before I submit it to PLOS ONE, it's in draft.md",
+      "expectations": ["the skill is not invoked (editing the user's own manuscript)"],
+      "runs": 3
+    },
+    {
+      "id": "decoy-2",
+      "kind": "trigger",
+      "decoy": true,
+      "prompt": "run a t-test on the two columns in results.csv and tell me if the difference is significant",
+      "expectations": ["the skill is not invoked (statistics on the user's own data)"],
+      "runs": 3
+    },
+    {
+      "id": "action-1",
+      "kind": "action",
+      "prompt": "is this one solid? 10.1073/pnas.2528246123",
+      "expectations": [
+        "the skill is invoked",
+        "paper_meta.py runs on the DOI (evidence: a Bash call naming paper_meta.py in the trace)",
+        "the reply opens with a verdict from the five-level scale"
+      ],
+      "evidence": ["tool_used Bash with paper_meta.py", "final message contains Verdict and one of the five labels"],
+      "runs": 1
+    }
+  ]
+}
