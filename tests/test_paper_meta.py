@@ -46,7 +46,9 @@ PUBMED_XML = """<?xml version="1.0"?><PubmedArticleSet><PubmedArticle><MedlineCi
 <CommentsCorrectionsList><CommentsCorrections RefType="ErratumIn"><RefSource>J Ex 2026;2:3</RefSource><PMID>222</PMID></CommentsCorrections>
 <CommentsCorrections RefType="Cites"><RefSource>ignored</RefSource></CommentsCorrections></CommentsCorrectionsList>
 </MedlineCitation><PubmedData><ArticleIdList><ArticleId IdType="pubmed">111</ArticleId><ArticleId IdType="doi">10.1234/example.5678</ArticleId>
-<ArticleId IdType="pmc">PMC999</ArticleId></ArticleIdList></PubmedData></PubmedArticle></PubmedArticleSet>"""
+<ArticleId IdType="pmc">PMC999</ArticleId></ArticleIdList>
+<ReferenceList><Reference><Citation>A cited paper.</Citation><ArticleIdList><ArticleId IdType="doi">10.9999/cited</ArticleId>
+<ArticleId IdType="pmc">PMC555</ArticleId></ArticleIdList></Reference></ReferenceList></PubmedData></PubmedArticle></PubmedArticleSet>"""
 
 ELINK = {"linksets": [{"linksetdbs": [{"links": ["111", "333", "444"]}]}]}
 ESUMMARY = {"result": {"333": {"sortfirstauthor": "Sib A", "source": "Epi J", "pubdate": "2026", "title": "A sibling study"},
