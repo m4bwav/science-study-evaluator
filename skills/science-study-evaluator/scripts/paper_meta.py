@@ -195,7 +195,10 @@ def parse_pubmed_xml(x: str) -> dict:
     root = ET.fromstring(x)
     out = {"pmid": root.findtext(".//PMID"), "pub_types": [p.text for p in root.iter("PublicationType")],
            "pmcid": None, "doi": None, "abstract": [], "coi": None, "grants": [], "notices": []}
-    for idn in root.iter("ArticleId"):
+    # Only the article's own ID list: root.iter() would also walk ReferenceList,
+    # where a cited paper's PMC ID overwrote the article's.
+    own = root.find(".//PubmedData/ArticleIdList")
+    for idn in (own if own is not None else []):
         if idn.get("IdType") == "pmc":
             out["pmcid"] = idn.text
         elif idn.get("IdType") == "doi" and not out["doi"]:
