@@ -4,6 +4,11 @@ Every change to [SKILL.md](SKILL.md), the references, the script and the compani
 
 Entry shape: `### C-YYYYMMDD-n · date · one-line summary`, then `because:` (IDs or "user request"), `files:` (file and section), and a sentence on what changed. Cite section headings, not line numbers.
 
+### C-20261104-1 · 2026-11-04 · Methodology: comparator per endpoint, blood as a clearance proxy, preprint diff, unreachable outlet text
+- because: gaps found appraising a paper on nitroglycerin plus vibration (Tuunanen 2026, Nature Communications); author request to record the lessons; L-017
+- files: references/methodology.md §3, §4, §7, §Changelog; references/fetch-routes.md Known blocks; LEARNINGS.md L-017
+- A randomized label hid that the headline biomarker was measured around one arm, and the checklist had no check for that per endpoint. It also had no branch for reading blood levels as brain clearance, no preprint-to-journal comparison, and no rule for grading coverage whose text is walled off.
+
 ### C-20261011-2 · 2026-10-11 · Methodology v8: n-of-1 self-tracking branch; YouTube fetch route
 - because: L-012; gap found appraising a health video that read one person's 26 home metabolomics tests against two published cohort studies
 - files: references/methodology.md §3, §Changelog (version 2026-10-11.1); references/fetch-routes.md Known blocks; LEARNINGS.md L-012

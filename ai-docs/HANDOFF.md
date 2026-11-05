@@ -19,3 +19,7 @@ Watch the first CI run on main and fix anything red.
 - Refresh due 2026-10-30 (evergreen.json).
 
 Related: see also [decisions/2026-10-11-public-skill-holds-the-procedure-each-user-s-folder-holds-th.md](decisions/2026-10-11-public-skill-holds-the-procedure-each-user-s-folder-holds-th.md)
+
+## Open as of 2026-11-04
+
+The private unit has methodology items not yet mirrored here: biological-age clocks as outcomes, and the cell-type change check under them. The 2026-11-04 endpoint update is mirrored, but the public version line carries no v-number because of that gap. No version bump or release was cut for it.

@@ -1,6 +1,6 @@
 # Study Appraisal Methodology (living document)
 
-Version: 2026-10-11.1 · Read by [SKILL.md](../SKILL.md) at Step 1 of every appraisal. Kept separate so a
+Version: 2026-11-04.1 · Read by [SKILL.md](../SKILL.md) at Step 1 of every appraisal. Kept separate so a
 refresh can change the checklist without touching the skill. Schedule in `evergreen.json`, findings in
 [RESEARCH.md](../RESEARCH.md), every change in [CHANGELOG.md](../CHANGELOG.md); retrieval routes in
 [fetch-routes.md](fetch-routes.md).
@@ -56,6 +56,14 @@ refresh can change the checklist without touching the skill. Schedule in `evergr
   reverse causation. Tools: Cochrane RoB 2 (RCTs), ROBINS-I v2 (2025), GRADE for
   body-of-evidence certainty (GRADE Book supersedes the Handbook by end of 2026;
   GRADErater automation in testing).
+- Comparator per endpoint. "Randomized crossover" describes the trial, not each result. For the
+  headline number, ask which arms actually measured it. If the blood draws, or any other outcome,
+  were taken in only one arm, that result is a single-arm before/after inside a randomized wrapper:
+  apply the single-arm checks below to it, and say so in the verdict (Tuunanen 2026: vibration vs
+  nitroglycerin plus vibration, biomarkers described only around the combined session; sham group
+  MRI only). Treat "either treatment alone gave under half the effect" the same way: find which
+  measure that sentence comes from before attaching it to the headline number. Confirm in the
+  supplement before calling a measure absent.
 - Single-arm pre/post (feasibility pilots, open-label extensions, most supplement trials): there
   is no counterfactual, so every within-person change carries practice effects, placebo, regression
   to the mean and natural history inside it. Three checks.
@@ -161,6 +169,14 @@ refresh can change the checklist without touching the skill. Schedule in `evergr
 - Sampling frame: clinic patients vs general population; demographic bounds on generalizing.
 - Proxy alert: is the measured quantity what the headline says? (BOLD synchrony ≠ blood
   flow; food-frequency surveys ≠ diet; self-report ≠ behavior.)
+- Blood level as a proxy for brain clearance. A higher concentration of a brain-linked protein in
+  blood after an intervention can mean more leaving the brain, less being removed by liver and
+  kidney, other tissues producing it, or a change in blood volume. Ask whether any tracer followed
+  the molecule from source to vein in humans; animal tracers support a mechanism without validating
+  the human inference. Find any dilution correction, what n and session it came from, and which way
+  it pushes; report the change with and without it (your arithmetic). Report the markers that stayed
+  flat: they can argue against a general concentration artefact, and they test the authors' story for
+  why some moved. Time of day and hours lying down belong in the same check.
 - Composite and latent exposures. When the exposure is a factor score, index, or composite
   rather than one measured thing, get the item list and the loadings before accepting the label.
   The score is a weighted sum of its items, so two people with completely different item
@@ -222,6 +238,13 @@ refresh can change the checklist without touching the skill. Schedule in `evergr
   association and argued it is not causal is spin in the reassuring direction. It is common in
   debunking coverage because the practical takeaway is correct. Grade it (usually mild) and give the
   accurate headline ("linked, but probably not causally").
+- Diff the preprint against the journal version. When a preprint exists, compare title and
+  conclusion. Softening during review ("increases" to "is associated with") is a green flag for the
+  paper and hands you the exact claim the coverage should not be making. Also check whether a
+  headline names one component of a combined intervention.
+- Outlet text you can't reach. Don't copy a paywalled article from an archive or mirror. Grade the
+  outlet's own public post and rewrites that cite it, say in the verdict that the article body was
+  not read, and limit its spin grade to what those show.
 - Locate the hop that added the claim. Causal language can enter at the paper ("appeals to"),
   the press release, the author's interview with the outlet, or the outlet's headline. Grade
   each hop separately: an outlet that faithfully quotes an author's overconfident interview is
@@ -245,6 +268,7 @@ refresh can change the checklist without touching the skill. Schedule in `evergr
 ## Changelog
 Full history with reasons: [CHANGELOG.md](../CHANGELOG.md). The C- ids below were assigned before the
 skill was published; the public changelog summarises them under its first entry.
+- 2026-11-04 (endpoint update): §3 comparator per endpoint. §4 blood level as a proxy for brain clearance. §7 preprint vs journal diff; outlet text you cannot reach. Source: C-20261104-1.
 - 2026-10-11 (v8): §3 n-of-1 self-tracking branch (matrix and units vs the population cut-off,
   time as the confounder, count the inputs screened, home-made indices, the seller of the
   measurement). Source: C-20261011-2.

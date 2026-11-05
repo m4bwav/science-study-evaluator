@@ -77,3 +77,11 @@ Entries before 2026-10-11 come from the skill's private use and keep their origi
 - Evidence: the 2026-10-11 appraisal (both citations and the whole-blood unit range came only from frames)
 - Scope: environment
 - Status: active · helpful 1 · harmful 0 · last_confirmed 2026-10-11
+
+### L-017 · 2026-11-04 · Paywalled news and open-access Nature: route choices
+- Trigger: on the 2026-11-04 vibrating-mattress appraisal, a news site refused the agent's fetch tool and the permission layer denied a scripted fetch that also tried a web archive copy. Nature's article URL returned a 303 to its login host in the fetch tool, and the script's next-step line pointed to a browser although the paper is gold open access.
+- Hypothesis: the news block is deliberate access control, so copies are off limits. Nature's redirect only sets a cookie, so a client that keeps cookies gets the public page.
+- Rule: for a paywalled article, use its public post and rewrites that cite it, and state the body was unread. For an open-access Nature paper, run curl with a cookie jar (`-L -c jar -b jar`) and search the stripped text. Also fetch the preprint to compare wording; a PDF the fetch tool can't read goes through `pdftotext`. Python started with `-I` ignores PYTHONIOENCODING, so call `sys.stdout.reconfigure(encoding='utf-8')`.
+- Evidence: 112 KB of article text came back on the first cookie-jar request; the fetch-tool route stopped at the redirect
+- Scope: environment, fetch routes
+- Status: active · helpful 1 · harmful 0 · last_confirmed 2026-11-04
