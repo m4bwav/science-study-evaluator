@@ -42,6 +42,12 @@ Best sources (primary first): EQUATOR Network (reporting guidelines index), cons
 
 Newest first. One entry per material finding; a quiet refresh gets one entry saying so.
 
+### R-20261113-1 · 2026-11-13 · Book: The Craft of Research (3rd ed., 2008), argument and evidence tests
+- Summary: Read for gaps. Adds: claims carry a scope (causes, may be a factor, correlates in some groups) and a role (main point, concession, view reported to refute) that reporting can lose; quantity words may hide a missing number; a general principle joining reason to claim can be tested five ways; a sound argument names and answers its strongest objection; reread a source before correcting it. Rejected: peer review, press and citation counts as reliability signs (the book itself concedes peer review misses errors). Book rules, unverified.
+- Sources: Booth, Colomb, Williams, The Craft of Research, 3rd ed., University of Chicago Press, 2008, ch. 4, 6, 8, 9, 10, 11
+- Magnitude: 0.35 (checklist items added; not a scheduled check)
+- Applied: C-20261113-1
+
 ### R-20260930-2 · 2026-09-30 · Checklist gap: equivalence declared from P > 0.05, and sponsored-trial comparator design
 - Summary: Appraising SWITCH (Harrold et al., BJN 2026) showed methodology.md had no equivalence/non-inferiority check. The paper defined equivalence as a non-significant P value with no margin; against the implied 1.5 kg margin from its own power calculation, the primary 90% CI (−0.2 to 2.4 kg) and the MI analysis (−0.1 to 1.7) both fail. Also no item on comparator choice in sponsored trials (habitual users randomised to continue vs quit), headline timepoints added by amendment, or "no harm" claims read off a small subsample. Found in use, not on the web.
 - Sources: https://doi.org/10.1017/S0007114526108150; Piaggio et al., JAMA 2012 (CONSORT NI/equivalence extension)

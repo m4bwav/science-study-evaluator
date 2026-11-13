@@ -8,6 +8,13 @@ Entry shape: `### T-YYYYMMDD-n · date · harness · env · passed/total`, then 
 
 ## Runs
 
+### T-20261113-1 · 2026-11-13 · fresh subagent per version, verdict section only · Windows 11 · 2/2 cases show the new behaviour
+- Cases: two saved appraisals from the original private unit (a full-fat dairy trial and its coverage; vocabulary score and Christian-nationalist survey items), facts only, verdict written afresh from the skill text before (0.1.0) and after (0.2.0) C-20261113-1.
+- Old text: neither section names an objection to its own verdict; neither places any hop on a scope rung.
+- New text: both name the strongest objection and answer it or attach a condition; both place every hop on a rung and name the hop that climbed (dairy: the press release; vocabulary: the author interview).
+- Verdict changes: dairy paper Weak (old) to Solid for its narrow claim (new), article Real but overhyped in both. The new run graded the paper on the claim it makes and moved the doubt into the condition ("holds only for no large short-term harm"). Vocabulary: Real but overhyped in both.
+- led to: §7 ladder note that a null or "fits within" result sits below the bottom rung (the dairy run found no rung for it).
+
 ### T-20261011-1 · 2026-10-11 · claude plugin eval (default model), unittest · Windows 11 native for trigger and decoy, WSL2 Ubuntu for the Bash case · 6/6
 - Unit tests: `python tests/test_paper_meta.py`, 15 offline tests pass, the live smoke test skipped without `SSE_LIVE`. Live runs by hand on 10.1073/pnas.2528246123 (open, PMC), 10.1111/jssr.70101 (closed, not in PubMed), 10.1057/s41599-025-04787-y (retracted: Crossref `updated-by` from the publisher and from Retraction Watch, INTEGRITY NOTICE printed), PMID input and a bad input (exit 2).
 - trigger-1, trigger-2, trigger-3, decoy-1, decoy-2 native: 5/5, $0.89. Every trigger called `Skill(science-study-evaluator)` once; both decoys called nothing.

@@ -48,9 +48,9 @@
   ],
   "counts": {
     "learnings": 7,
-    "changes": 1,
-    "research": 4,
-    "tests": 1
+    "changes": 2,
+    "research": 5,
+    "tests": 2
   },
   "consolidate_every": 25,
   "tests": {
@@ -64,5 +64,5 @@
     "last_failure": null,
     "research_after_days": null
   },
-  "version": "0.1.0"
+  "version": "0.2.0"
 }
