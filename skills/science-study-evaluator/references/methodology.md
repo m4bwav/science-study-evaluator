@@ -1,6 +1,6 @@
 # Study Appraisal Methodology (living document)
 
-Version: 2026-11-04.1 · Read by [SKILL.md](../SKILL.md) at Step 1 of every appraisal. Kept separate so a
+Version: 2026-11-13.1 · Read by [SKILL.md](../SKILL.md) at Step 1 of every appraisal. Kept separate so a
 refresh can change the checklist without touching the skill. Schedule in `evergreen.json`, findings in
 [RESEARCH.md](../RESEARCH.md), every change in [CHANGELOG.md](../CHANGELOG.md); retrieval routes in
 [fetch-routes.md](fetch-routes.md).
@@ -9,6 +9,8 @@ refresh can change the checklist without touching the skill. Schedule in `evergr
 - Locate the primary source. Verify the citation actually matches: authors, journal, year,
   DOI must resolve to the claimed paper. A mismatched or invented citation is the hallmark
   of AI content farms: it discredits the article even when the linked paper is real.
+  Before a Fabricated / misattributed verdict, reread the paper passage the article cites and
+  confirm it does not say what the article attributes to it; a wrong verdict here costs most.
 - Map the messenger chain: paper → press release → aggregator/blog/social. Compare claims
   at each hop; look for press-release fingerprints (identical phrasing, quotes only from PR).
 - Check integrity status: Retraction Watch Database, PubPeer comments on the paper. Also check
@@ -163,6 +165,12 @@ refresh can change the checklist without touching the skill. Schedule in `evergr
   (e) The seller of the measurement. When the presenter earns from the test kit or the tracking app,
   say so even when it's disclosed; it predicts that the measurement gets read as finding a problem.
 
+- No branch fits the design. Write out the general principle that joins the measured result to
+  the headline ("when X is measured, Y is true") and test it five ways: is it true; is it limited
+  as it should be; does a stronger principle outrank it; does the field accept that kind of
+  principle; are this result and this headline fair instances of it. The proxy alert in §4 is the
+  last test applied to one case.
+
 ## 4. Sample & measurement
 - N per group, especially controls. In pooled/multi-cohort studies, check whether the
   flashiest number comes from the smallest or most biased subsample.
@@ -220,6 +228,8 @@ refresh can change the checklist without touching the skill. Schedule in `evergr
   verdict, note that a large N makes significance cheap, and name the one number to look for
   if the PDF turns up (usually the coefficient's movement from the bare model to the full one).
   Don't invent a translation.
+- Quantity words in the article ("many", "most", "significantly") with no number beside them are a
+  flag, and so is precision finer than the design can support (decimals on a 40-person survey).
 
 ## 6. Interests
 - COI declarations vs author affiliations: a commercial affiliation with no matching
@@ -231,6 +241,13 @@ refresh can change the checklist without touching the skill. Schedule in `evergr
 ## 7. Spin delta
 - Quote the paper's own hedged conclusion next to the article's claim. Grade the
   exaggeration: none / mild / severe / fabricated.
+- Scope ladder for each hop. Place the claim at every hop on one rung: causes; may be a factor
+  in; correlates with, in some groups. A hop that climbs a rung added the spin; name the rung
+  it started on and the one it reached. A null or "fits within" result sits below the bottom
+  rung, so any hop that turns it into a benefit has climbed.
+- Role and condition dropped. A limitation or concession in the paper quoted as its finding, or
+  the main claim quoted with its stated limiting condition ("in this sample", "among habitual
+  users") cut off, is spin even when the quoted words are exact.
 - Grade omission as well as exaggeration. A two-sided result reported one-sided is spin even
   when every quoted sentence is accurate: if the same table carries a larger finding in the
   unsurprising direction and the article skips it, say so.
@@ -268,6 +285,9 @@ refresh can change the checklist without touching the skill. Schedule in `evergr
 ## Changelog
 Full history with reasons: [CHANGELOG.md](../CHANGELOG.md). The C- ids below were assigned before the
 skill was published; the public changelog summarises them under its first entry.
+- 2026-11-13: §1 reread the passage before a misattribution verdict. §3 five warrant tests when
+  no branch fits. §5 quantity words without numbers, false precision. §7 scope ladder per hop;
+  concession or stripped limiting condition as spin. Source: C-20261113-1.
 - 2026-11-04 (endpoint update): §3 comparator per endpoint. §4 blood level as a proxy for brain clearance. §7 preprint vs journal diff; outlet text you cannot reach. Source: C-20261104-1.
 - 2026-10-11 (v8): §3 n-of-1 self-tracking branch (matrix and units vs the population cut-off,
   time as the confounder, count the inputs screened, home-made indices, the seller of the

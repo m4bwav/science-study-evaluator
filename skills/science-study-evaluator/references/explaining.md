@@ -30,6 +30,10 @@ Use one when it is exact, not decorative, and pick it from the reader's own fiel
 
 For a reader with no technical background, everyday analogies work the same way (a bathroom scale that reads two pounds heavy for everyone still ranks people correctly; a survey of gym members about exercise habits). The test is the same: does the analogy have the same structure as the statistical problem?
 
+## Arguing against your own verdict
+
+Before the bottom line, name the strongest objection a careful reader would raise to the verdict (another cause, a counterexample, a different definition of the headline term, a section of the paper you could not read) and answer it with a reason and the evidence for that reason. If you cannot answer it, say so and attach the condition to the verdict instead: "Weak, unless the full text shows the controls were measured before exposure." An objection you cannot rebut is stated, never dropped. Raise only objections a real reader or source would make.
+
 ## Translating the effect
 
 Turn the headline coefficient into something a reader can feel: a percentile of the exposure plus a concrete unit (percent, years, currency, absolute risk per 1,000 people). Label it as your arithmetic on their numbers, not a number from the paper. When no magnitude is reachable (paywall, the outlet reported only "significant"), say so and don't invent one.

@@ -4,6 +4,11 @@ Every change to [SKILL.md](SKILL.md), the references, the script and the compani
 
 Entry shape: `### C-YYYYMMDD-n · date · one-line summary`, then `because:` (IDs or "user request"), `files:` (file and section), and a sentence on what changed. Cite section headings, not line numbers.
 
+### C-20261113-1 · 2026-11-13 · 0.2.0: scope ladder, self-objection, warrant tests, quantity words, reread before misattribution
+- because: R-20261113-1 (Booth, Colomb and Williams, The Craft of Research, 3rd ed., 2008); book rules, unverified on our own appraisals beyond the two-case behaviour check in TESTS.md T-20261113-1
+- files: references/methodology.md §1, §3, §5, §7, §Changelog (version 2026-11-13.1); SKILL.md Step 3; references/explaining.md Arguing against your own verdict
+- Spin is now graded per hop on a three-rung scope ladder, and a concession quoted as the finding or a claim stripped of its limiting condition is named spin. A design with no branch gets the five warrant tests. Unexplained quantity words and false precision are flags. Every review states the strongest objection to its own verdict and answers it or attaches a condition. A misattribution verdict waits on a reread of the cited passage. Not adopted: the book's reliability signs (peer review, press, citation counts), weaker than §1 and §2.
+
 ### C-20261104-1 · 2026-11-04 · Methodology: comparator per endpoint, blood as a clearance proxy, preprint diff, unreachable outlet text
 - because: gaps found appraising a paper on nitroglycerin plus vibration (Tuunanen 2026, Nature Communications); author request to record the lessons; L-017
 - files: references/methodology.md §3, §4, §7, §Changelog; references/fetch-routes.md Known blocks; LEARNINGS.md L-017
