@@ -39,7 +39,7 @@ import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
 
-VERSION = "0.2.0"
+VERSION = "0.3.0"
 REPO = "https://github.com/m4bwav/science-study-evaluator"
 EUTILS = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils"
 EPMC = "https://www.ebi.ac.uk/europepmc/webservices/rest"

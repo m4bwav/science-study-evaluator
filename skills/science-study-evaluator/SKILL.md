@@ -2,7 +2,7 @@
 name: science-study-evaluator
 description: "Critically appraise a scientific study and the news coverage around it: verify the citation, read the paper itself, check conflicts of interest, measure how far the headline outruns the findings, and give a verdict (Solid, Real but overhyped, Weak, Junk/predatory, Fabricated/misattributed) with the reasoning explained in plain language. Use whenever the user shares a paper, DOI, PubMed link, preprint, press release or news article about research and asks whether it is legit, real, overhyped, junk or worth believing: 'is this study legit?', 'does this paper actually show that?', 'what's wrong with this research?', 'fact-check this health article', 'should I trust this headline?', 'appraise this RCT', or pastes an r/science link. Also for 'refresh science-study-evaluator' and 'is science-study-evaluator stale'. Not for writing or peer-reviewing the user's own manuscript, running statistics on their data, or searching the literature for papers on a topic."
 metadata:
-  version: "0.2.0"
+  version: "0.3.0"
 ---
 
 # Science study evaluator

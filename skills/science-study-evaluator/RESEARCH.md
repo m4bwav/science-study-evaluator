@@ -42,6 +42,12 @@ Best sources (primary first): EQUATOR Network (reporting guidelines index), cons
 
 Newest first. One entry per material finding; a quiet refresh gets one entry saying so.
 
+### R-20261114-1 · 2026-11-14 · Book: The Demon-Haunted World (1995), baloney detection kit and fallacy list
+- Summary: Read for gaps. Adds: list rival explanations and what would knock each out; a claim saved after a failed test by an excuse found afterwards is special pleading; absence of evidence is not evidence of absence; counting hits and forgetting misses is selection. Already covered: correlation vs causation, post hoc, small numbers, suppressed evidence, interests behind a claim. Not adopted: Occam's razor and the authority point, which give no checkable step. Book rules, unverified.
+- Sources: Sagan, The Demon-Haunted World: Science as a Candle in the Dark, 1995, ch. 10, 12
+- Magnitude: 0.2 (checklist items added; not a scheduled check)
+- Applied: C-20261114-1
+
 ### R-20261113-1 · 2026-11-13 · Book: The Craft of Research (3rd ed., 2008), argument and evidence tests
 - Summary: Read for gaps. Adds: claims carry a scope (causes, may be a factor, correlates in some groups) and a role (main point, concession, view reported to refute) that reporting can lose; quantity words may hide a missing number; a general principle joining reason to claim can be tested five ways; a sound argument names and answers its strongest objection; reread a source before correcting it. Rejected: peer review, press and citation counts as reliability signs (the book itself concedes peer review misses errors). Book rules, unverified.
 - Sources: Booth, Colomb, Williams, The Craft of Research, 3rd ed., University of Chicago Press, 2008, ch. 4, 6, 8, 9, 10, 11
