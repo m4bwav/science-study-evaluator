@@ -4,6 +4,11 @@ Every change to [SKILL.md](SKILL.md), the references, the script and the compani
 
 Entry shape: `### C-YYYYMMDD-n · date · one-line summary`, then `because:` (IDs or "user request"), `files:` (file and section), and a sentence on what changed. Cite section headings, not line numbers.
 
+### C-20261114-1 · 2026-11-14 · 0.3.0: rival explanations, rescued claims, "no evidence of harm", counting hits
+- because: R-20261114-1 (Sagan, The Demon-Haunted World, 1995); book rules, unverified on our own appraisals
+- files: references/methodology.md §3, §7, §Changelog (version 2026-11-14.1); RESEARCH.md
+- §3 asks for two rival explanations and what rules each out before the verdict. §7 grades an after-the-fact excuse for a null as spin, treats "no evidence of harm" reported as "safe" as absence of evidence relabelled, and asks for a systematic review behind a list of agreeing studies. Not adopted: Occam's razor and the authority point (no checkable step; §6 already covers paid promoters).
+
 ### C-20261113-1 · 2026-11-13 · 0.2.0: scope ladder, self-objection, warrant tests, quantity words, reread before misattribution
 - because: R-20261113-1 (Booth, Colomb and Williams, The Craft of Research, 3rd ed., 2008); book rules, unverified on our own appraisals beyond the two-case behaviour check in TESTS.md T-20261113-1
 - files: references/methodology.md §1, §3, §5, §7, §Changelog (version 2026-11-13.1); SKILL.md Step 3; references/explaining.md Arguing against your own verdict

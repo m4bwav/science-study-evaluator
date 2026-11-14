@@ -1,6 +1,6 @@
 # Study Appraisal Methodology (living document)
 
-Version: 2026-11-13.1 · Read by [SKILL.md](../SKILL.md) at Step 1 of every appraisal. Kept separate so a
+Version: 2026-11-14.1 · Read by [SKILL.md](../SKILL.md) at Step 1 of every appraisal. Kept separate so a
 refresh can change the checklist without touching the skill. Schedule in `evergreen.json`, findings in
 [RESEARCH.md](../RESEARCH.md), every change in [CHANGELOG.md](../CHANGELOG.md); retrieval routes in
 [fetch-routes.md](fetch-routes.md).
@@ -58,6 +58,9 @@ refresh can change the checklist without touching the skill. Schedule in `evergr
   reverse causation. Tools: Cochrane RoB 2 (RCTs), ROBINS-I v2 (2025), GRADE for
   body-of-evidence certainty (GRADE Book supersedes the Handbook by end of 2026;
   GRADErater automation in testing).
+- Rivals before the verdict. Name at least two other explanations for the headline result (chance,
+  selection, confounding, reverse causation, placebo or natural history) and the design feature or
+  number that rules each one out. A rival nothing rules out goes in the review as a limit.
 - Comparator per endpoint. "Randomized crossover" describes the trial, not each result. For the
   headline number, ask which arms actually measured it. If the blood draws, or any other outcome,
   were taken in only one arm, that result is a single-arm before/after inside a randomized wrapper:
@@ -255,6 +258,13 @@ refresh can change the checklist without touching the skill. Schedule in `evergr
   association and argued it is not causal is spin in the reassuring direction. It is common in
   debunking coverage because the practical takeaway is correct. Grade it (usually mild) and give the
   accurate headline ("linked, but probably not causally").
+- A rescue after a failed test. When an author or promoter explains a null or a missed prediction
+  by a dose, duration or subgroup the protocol never named, the excuse arrived after the data: grade
+  it as spin and report the result as null.
+- "No evidence of harm" reported as "safe" or "no risk" needs a design powered to show safety;
+  otherwise it is absence of evidence relabelled, the coverage form of the §3 equivalence point.
+- Counting hits. A claim backed by a list of agreeing studies, with no systematic review and no
+  word on the studies that disagree, is selection; look for the review before crediting the list.
 - Diff the preprint against the journal version. When a preprint exists, compare title and
   conclusion. Softening during review ("increases" to "is associated with") is a green flag for the
   paper and hands you the exact claim the coverage should not be making. Also check whether a
@@ -285,6 +295,8 @@ refresh can change the checklist without touching the skill. Schedule in `evergr
 ## Changelog
 Full history with reasons: [CHANGELOG.md](../CHANGELOG.md). The C- ids below were assigned before the
 skill was published; the public changelog summarises them under its first entry.
+- 2026-11-14: §3 rival explanations before the verdict. §7 rescue after a failed test; "no
+  evidence of harm" as "safe"; counting hits. Source: C-20261114-1.
 - 2026-11-13: §1 reread the passage before a misattribution verdict. §3 five warrant tests when
   no branch fits. §5 quantity words without numbers, false precision. §7 scope ladder per hop;
   concession or stripped limiting condition as spin. Source: C-20261113-1.
