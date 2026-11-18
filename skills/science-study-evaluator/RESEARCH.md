@@ -42,6 +42,12 @@ Best sources (primary first): EQUATOR Network (reporting guidelines index), cons
 
 Newest first. One entry per material finding; a quiet refresh gets one entry saying so.
 
+### R-20261118-1 · 2026-11-18 · Books: Philosophy of Pseudoscience (2013) and Dr. Golem (2005), testability, doubt tactics, replication fidelity
+- Summary: Read for gaps. Adds: a therapy claim with no named measurable outcome, or one said to vanish under trial, is untestable as stated (Jerkert's chapter); the shared tactics of denial and paid doubt (outside-field experts, sponsor-funded counter-studies, both-sides and total-proof framing; Prothero's chapter); a disputed replication can differ in population, prior treatment, dose, route or duration (the vitamin C trials), and testimony cannot judge a population-level link (Dr. Golem conclusion). Not adopted: a pseudoscience label from demarcation criteria (the book's own authors find no single criterion). Book rules, unverified on our own appraisals.
+- Sources: Pigliucci and Boudry (eds.), Philosophy of Pseudoscience, 2013, ch. 16 and 18; Collins and Pinch, Dr. Golem: How to Think About Medicine, 2005, ch. 4 and Conclusion
+- Magnitude: 0.2 (checklist items added; not a scheduled check)
+- Applied: C-20261118-1
+
 ### R-20261114-1 · 2026-11-14 · Book: The Demon-Haunted World (1995), baloney detection kit and fallacy list
 - Summary: Read for gaps. Adds: list rival explanations and what would knock each out; a claim saved after a failed test by an excuse found afterwards is special pleading; absence of evidence is not evidence of absence; counting hits and forgetting misses is selection. Already covered: correlation vs causation, post hoc, small numbers, suppressed evidence, interests behind a claim. Not adopted: Occam's razor and the authority point, which give no checkable step. Book rules, unverified.
 - Sources: Sagan, The Demon-Haunted World: Science as a Candle in the Dark, 1995, ch. 10, 12

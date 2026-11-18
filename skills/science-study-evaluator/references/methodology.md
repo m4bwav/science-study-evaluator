@@ -1,6 +1,6 @@
 # Study Appraisal Methodology (living document)
 
-Version: 2026-11-14.1 · Read by [SKILL.md](../SKILL.md) at Step 1 of every appraisal. Kept separate so a
+Version: 2026-11-18.1 · Read by [SKILL.md](../SKILL.md) at Step 1 of every appraisal. Kept separate so a
 refresh can change the checklist without touching the skill. Schedule in `evergreen.json`, findings in
 [RESEARCH.md](../RESEARCH.md), every change in [CHANGELOG.md](../CHANGELOG.md); retrieval routes in
 [fetch-routes.md](fetch-routes.md).
@@ -61,6 +61,12 @@ refresh can change the checklist without touching the skill. Schedule in `evergr
 - Rivals before the verdict. Name at least two other explanations for the headline result (chance,
   selection, confounding, reverse causation, placebo or natural history) and the design feature or
   number that rules each one out. A rival nothing rules out goes in the review as a limit.
+- Testable as stated? For a therapy or product claim, find the outcome its promoters say it changes. If
+  they name none, say the effect only shows outside trials, or spread it over many unnamed holistic
+  effects, the claim cannot be tested as stated: say so instead of grading evidence. "Trials can't
+  capture this" is answered by the measurable outcome they already promise (pain, sick days, a lab
+  value). Personal testimony cannot settle a link that only population data can show (a vaccine and
+  a rare outcome), whichever way it points.
 - Comparator per endpoint. "Randomized crossover" describes the trial, not each result. For the
   headline number, ask which arms actually measured it. If the blood draws, or any other outcome,
   were taken in only one arm, that result is a single-arm before/after inside a randomized wrapper:
@@ -223,6 +229,9 @@ refresh can change the checklist without touching the skill. Schedule in `evergr
   fields (social psych, nutrition epi, candidate genes, small-N neuroimaging) gets a lower prior.
   When looking for a replication, check the cohort: the same finding in the same dataset is not
   one. A different national cohort, a different birth year, same sign is.
+  Check fidelity too: a study cited as confirming or refuting an earlier one may differ in population,
+  prior treatment, dose, route or duration. List the differences; one that bears on the proposed
+  mechanism means it answered a different question, and either side may lean on that gap.
 - Translate the headline effect into something a reader can feel: a percentile of the exposure
   plus a concrete unit (percent, years, currency, absolute risk per 1,000). Label it as your own
   arithmetic on their coefficient, not a number from the paper. "Precisely estimated and small"
@@ -238,6 +247,10 @@ refresh can change the checklist without touching the skill. Schedule in `evergr
 - COI declarations vs author affiliations: a commercial affiliation with no matching
   disclosure is a red flag in its own right.
 - Funding source and its role. Who is promoting the finding, and what do they sell?
+- Manufactured doubt. When coverage disputes a strong consensus, look for the pattern: dissenting
+  experts trained in another field, counter-studies paid for by the party that gains, "both sides"
+  framing, a demand for total proof, normal debate over details read as no consensus. A pattern, not
+  proof of bad faith in any one case; check each dissenter's field and funding.
 - Contested-citation check: when an article leans on a secondary source (e.g., a famous
   review), check how the field actually received that source.
 
@@ -295,6 +308,8 @@ refresh can change the checklist without touching the skill. Schedule in `evergr
 ## Changelog
 Full history with reasons: [CHANGELOG.md](../CHANGELOG.md). The C- ids below were assigned before the
 skill was published; the public changelog summarises them under its first entry.
+- 2026-11-18: §3 testable as stated; §5 replication fidelity; §6 manufactured doubt. Source:
+  C-20261118-1.
 - 2026-11-14: §3 rival explanations before the verdict. §7 rescue after a failed test; "no
   evidence of harm" as "safe"; counting hits. Source: C-20261114-1.
 - 2026-11-13: §1 reread the passage before a misattribution verdict. §3 five warrant tests when

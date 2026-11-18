@@ -4,6 +4,11 @@ Every change to [SKILL.md](SKILL.md), the references, the script and the compani
 
 Entry shape: `### C-YYYYMMDD-n · date · one-line summary`, then `because:` (IDs or "user request"), `files:` (file and section), and a sentence on what changed. Cite section headings, not line numbers.
 
+### C-20261118-1 · 2026-11-18 · 0.4.0: testable as stated, replication fidelity, manufactured doubt
+- because: R-20261118-1 (Pigliucci and Boudry, Philosophy of Pseudoscience, 2013; Collins and Pinch, Dr. Golem, 2005); book rules, unverified on our own appraisals
+- files: references/methodology.md §3, §5, §6, §Changelog (version 2026-11-18.1); RESEARCH.md
+- §3 asks whether a therapy claim names an outcome a trial could measure before grading its evidence, and says testimony cannot settle a population-level link. §5 checks that a cited replication matched the original's population, prior treatment, dose, route and duration. §6 names the manufactured-doubt pattern around disputed consensus. Not adopted: a pseudoscience label from demarcation criteria.
+
 ### C-20261114-1 · 2026-11-14 · 0.3.0: rival explanations, rescued claims, "no evidence of harm", counting hits
 - because: R-20261114-1 (Sagan, The Demon-Haunted World, 1995); book rules, unverified on our own appraisals
 - files: references/methodology.md §3, §7, §Changelog (version 2026-11-14.1); RESEARCH.md
