@@ -2,7 +2,7 @@
 name: science-study-evaluator
 description: "Critically appraise a scientific study and the news coverage around it: verify the citation, read the paper itself, check conflicts of interest, measure how far the headline outruns the findings, and give a verdict (Solid, Real but overhyped, Weak, Junk/predatory, Fabricated/misattributed) with the reasoning explained in plain language. Use whenever the user shares a paper, DOI, PubMed link, preprint, press release or news article about research and asks whether it is legit, real, overhyped, junk or worth believing: 'is this study legit?', 'does this paper actually show that?', 'what's wrong with this research?', 'fact-check this health article', 'should I trust this headline?', 'appraise this RCT', or pastes an r/science link. Also for 'refresh science-study-evaluator' and 'is science-study-evaluator stale'. Not for writing or peer-reviewing the user's own manuscript, running statistics on their data, or searching the literature for papers on a topic."
 metadata:
-  version: "0.4.0"
+  version: "0.5.0"
 ---
 
 # Science study evaluator
@@ -23,6 +23,7 @@ Read [evergreen.json](evergreen.json). If `contradiction` is set or today is on 
 2. **Run `PM <DOI or URL>` first** wherever Python can reach the internet; add `--email <address>` (or set `SSE_EMAIL`) for the open-access check and `--fulltext <tmp dir>` to save the article as greppable text. One call returns the Crossref record (authors, affiliations, received and accepted dates, abstract, funders, retraction and correction notices), open copies, the PubMed record (structured abstract, COI statement, grants, errata), similar articles, and a NEXT line naming the cheapest route to the full text. If the script can't run, follow [references/fetch-routes.md](references/fetch-routes.md).
 3. **Verify the citation.** Authors, journal, year and DOI must match a real paper. Content farms, AI-written ones especially, invent author lists while linking a real paper; that alone makes the article Fabricated/misattributed.
 4. **Check the status now, not as of the article.** An INTEGRITY NOTICE from the script comes first. When the article is more than a few months old, check whether the paper has since been published, retracted or superseded; for economics and social-science working papers the author's homepage is usually the only source (fetch-routes.md). Grade the article on what was knowable when it was written and report the current status separately. Then the mirror check: an outlet calling a 15-month-old paper "new" has manufactured the recency, and a gap that size usually means a companion paper from the same sample that the article ignores. The similar-articles list is where it turns up.
+5. **Find the headline number in the source.** If the article's figure is not in the paper's or report's own summary, record that before appraising and trace where it came from (methodology §7).
 
 ## Step 2: appraise
 

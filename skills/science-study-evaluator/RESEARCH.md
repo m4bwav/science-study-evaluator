@@ -42,7 +42,13 @@ Best sources (primary first): EQUATOR Network (reporting guidelines index), cons
 
 Newest first. One entry per material finding; a quiet refresh gets one entry saying so.
 
-### R-20261118-1 · 2026-11-18 · Books: Philosophy of Pseudoscience (2013) and Dr. Golem (2005), testability, doubt tactics, replication fidelity
+### R-20261119-1 · 2026-11-19 · Book: Bad Science (Goldacre, 2008), trial tricks, bad stats, media
+- Summary: Read for gaps. Adds: surrogate outcome and lab-to-life leaps; expectancy in uncontrolled pilots; completers-only analysis and ideal patients; clustering; a number mined from many comparisons when the source's summary says no change; natural frequencies; harms reported less prominently than benefits; publication bias, duplicate publication and the quality-effect gradient; commissioned formula and survey stories; regression to the mean for "it worked for me". Cautions: written before routine trial registration; funnel plots are weak below about ten studies; the quality gradient comes from one homeopathy analysis. Book rules, unverified on our own appraisals.
+- Sources: Ben Goldacre, Bad Science, Fourth Estate, 2008, ch. 4-8, 11-14
+- Magnitude: 0.2 (checklist items added; not a scheduled check)
+- Applied: C-20261119-1
+
+ · 2026-11-18 · Books: Philosophy of Pseudoscience (2013) and Dr. Golem (2005), testability, doubt tactics, replication fidelity
 - Summary: Read for gaps. Adds: a therapy claim with no named measurable outcome, or one said to vanish under trial, is untestable as stated (Jerkert's chapter); the shared tactics of denial and paid doubt (outside-field experts, sponsor-funded counter-studies, both-sides and total-proof framing; Prothero's chapter); a disputed replication can differ in population, prior treatment, dose, route or duration (the vitamin C trials), and testimony cannot judge a population-level link (Dr. Golem conclusion). Not adopted: a pseudoscience label from demarcation criteria (the book's own authors find no single criterion). Book rules, unverified on our own appraisals.
 - Sources: Pigliucci and Boudry (eds.), Philosophy of Pseudoscience, 2013, ch. 16 and 18; Collins and Pinch, Dr. Golem: How to Think About Medicine, 2005, ch. 4 and Conclusion
 - Magnitude: 0.2 (checklist items added; not a scheduled check)

@@ -36,4 +36,8 @@ Before the bottom line, name the strongest objection a careful reader would rais
 
 ## Translating the effect
 
-Turn the headline coefficient into something a reader can feel: a percentile of the exposure plus a concrete unit (percent, years, currency, absolute risk per 1,000 people). Label it as your arithmetic on their numbers, not a number from the paper. When no magnitude is reachable (paywall, the outlet reported only "significant"), say so and don't invent one.
+Turn the headline coefficient into something a reader can feel: a percentile of the exposure plus a concrete unit (percent, years, currency, absolute risk per 1,000 people). Label it as your arithmetic on their numbers, not a number from the paper. Give every risk result as a natural frequency too: "about 2 more cases per 1,000 people like you over 10 years", with the baseline beside it. People, experts included, judge risk better that way than from a relative percentage, which is the biggest number and the one coverage picks (Goldacre, Bad Science, ch. 14). When no magnitude is reachable (paywall, the outlet reported only "significant"), say so and don't invent one.
+
+## When the evidence is "it worked for me"
+
+Answer kindly and explain why one recovery cannot show the cause: people seek help when symptoms are at their worst, and most conditions ease on their own (regression to the mean, natural history), so improvement follows almost anything tried at that moment. Add that we notice hits and forget misses. Then say what kind of study could answer the question (Bad Science, ch. 13).

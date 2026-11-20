@@ -4,7 +4,12 @@ Every change to [SKILL.md](SKILL.md), the references, the script and the compani
 
 Entry shape: `### C-YYYYMMDD-n · date · one-line summary`, then `because:` (IDs or "user request"), `files:` (file and section), and a sentence on what changed. Cite section headings, not line numbers.
 
-### C-20261118-1 · 2026-11-18 · 0.4.0: testable as stated, replication fidelity, manufactured doubt
+### C-20261119-1 · 2026-11-19 · 0.5.0: surrogates, expectancy, completers, clustering, mined numbers, harms, publication bias, PR stories
+- because: R-20261119-1 (Goldacre, Bad Science, 2008); book rules, unverified on our own appraisals
+- files: references/methodology.md §3, §4, §5, §6, §7, §Changelog (version 2026-11-19.1); references/explaining.md; SKILL.md Step 1; RESEARCH.md
+- §3 names surrogate and lab-to-life leaps and unblinded expectancy. §4 downgrades completers-only analyses and ideal-patient samples. §5 checks clustered samples and the mined number. §6 adds harms parity and a body-of-evidence check (small-study dominance, funnel asymmetry as a hint only, duplicate publication, effect shrinking with quality). §7 traces a headline number missing from the source's summary and flags commissioned formula and survey stories. explaining.md adds natural frequencies and how to answer "it worked for me". Not adopted: credentials as costume (§1 and §6 already cover it), the book's trial-trick list where §3 already has comparator and outcome switching.
+
+ · 2026-11-18 · 0.4.0: testable as stated, replication fidelity, manufactured doubt
 - because: R-20261118-1 (Pigliucci and Boudry, Philosophy of Pseudoscience, 2013; Collins and Pinch, Dr. Golem, 2005); book rules, unverified on our own appraisals
 - files: references/methodology.md §3, §5, §6, §Changelog (version 2026-11-18.1); RESEARCH.md
 - §3 asks whether a therapy claim names an outcome a trial could measure before grading its evidence, and says testimony cannot settle a population-level link. §5 checks that a cited replication matched the original's population, prior treatment, dose, route and duration. §6 names the manufactured-doubt pattern around disputed consensus. Not adopted: a pseudoscience label from demarcation criteria.
