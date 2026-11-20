@@ -1,6 +1,6 @@
 # Study Appraisal Methodology (living document)
 
-Version: 2026-11-18.1 · Read by [SKILL.md](../SKILL.md) at Step 1 of every appraisal. Kept separate so a
+Version: 2026-11-19.1 · Read by [SKILL.md](../SKILL.md) at Step 1 of every appraisal. Kept separate so a
 refresh can change the checklist without touching the skill. Schedule in `evergreen.json`, findings in
 [RESEARCH.md](../RESEARCH.md), every change in [CHANGELOG.md](../CHANGELOG.md); retrieval routes in
 [fetch-routes.md](fetch-routes.md).
@@ -67,6 +67,15 @@ refresh can change the checklist without touching the skill. Schedule in `evergr
   capture this" is answered by the measurable outcome they already promise (pain, sick days, a lab
   value). Personal testimony cannot settle a link that only population data can show (a vaccine and
   a rare outcome), whichever way it points.
+- Surrogate and lab-to-life leaps. When the measured outcome is a marker (a blood level, an antioxidant
+  score, a scan feature) and the claim is about disease or death, name the marker, name the claimed
+  outcome, and grade the claim one step down unless trials link the two. In vitro, animal or
+  mechanism results headlined as a human benefit are mechanism evidence only (Goldacre, Bad Science,
+  ch. 6, 11).
+- Expectancy. Participants who know they are treated, are watched, or hear the publicity improve on
+  subjective outcomes anyway (Hawthorne, placebo; ritual such as pill count or injection changes its
+  size). An unblinded subjective outcome, or a publicised pilot with no control (a school fish-oil
+  "trial"), shows nothing about the treatment (Bad Science, ch. 5, 7-8).
 - Comparator per endpoint. "Randomized crossover" describes the trial, not each result. For the
   headline number, ask which arms actually measured it. If the blood draws, or any other outcome,
   were taken in only one arm, that result is a single-arm before/after inside a randomized wrapper:
@@ -215,6 +224,11 @@ refresh can change the checklist without touching the skill. Schedule in `evergr
   one or two survey items because that is what a long-running survey carried, say so. Read
   each item literally and ask what else it measures: an item about a court ruling partly
   measures civics knowledge, which correlates with the exposure by construction.
+- Completers only. In a trial, dropouts tend to be the people who did badly or had side effects, so an
+  analysis of completers flatters the treatment. Downgrade when there is no intention-to-treat result,
+  or attrition passes about 20% or differs between arms. Check the inclusion criteria too: trials
+  that recruit ideal patients (younger, no other illness, no other drugs) do not speak for the people
+  the claim is about (Bad Science, ch. 4, 11).
 - Long-horizon attrition. In multi-decade cohorts, state retention from the baseline wave to the
   outcome wave as a number (e.g. 14,870 children at age 10 → 6,952 in the wage regressions,
   47%). Then ask whether dropout correlates with the exposure, and which way the resulting bias
@@ -225,6 +239,11 @@ refresh can change the checklist without touching the skill. Schedule in `evergr
 - Effect sizes with CIs, not just p-values. Tiny d with huge N = real but possibly trivial.
 - Multiple-comparisons handling; subgroup fishing; composite indices that amplify weak
   signals; clusters of p just under .05; internal inconsistencies between reported numbers.
+- Clustering. Pupils in schools, patients in practices, people in villages are not independent. If
+  the unit randomised or sampled is the group, the analysis must account for it; a big n analysed
+  person by person overstates precision and the p-value (Bad Science, ch. 14).
+- Mined number. When the headline figure is one of dozens of comparisons in a report whose own
+  summary says no change, it is chance until shown otherwise, whoever picked it (ch. 14).
 - Replication context: independent reproduction? Single-study novelty in replication-crisis
   fields (social psych, nutrition epi, candidate genes, small-N neuroimaging) gets a lower prior.
   When looking for a replication, check the cohort: the same finding in the same dataset is not
@@ -251,6 +270,12 @@ refresh can change the checklist without touching the skill. Schedule in `evergr
   experts trained in another field, counter-studies paid for by the party that gains, "both sides"
   framing, a demand for total proof, normal debate over details read as no consensus. A pattern, not
   proof of bad faith in any one case; check each dissenter's field and funding.
+- Harms parity. Are adverse events reported with the same prominence as benefits, in the same
+  paper? Side effects in a supplement, a separate later paper or not at all are a finding (ch. 11).
+- Body of evidence. For a review or a run of trials: a field dominated by small positive trials or a
+  lopsided funnel plot hints at publication bias (weak below about ten studies, and asymmetry has
+  other causes); the same trial published twice and pooled twice inflates the estimate; effects that
+  shrink as trial quality rises point to bias, so discount the pooled effect (Bad Science, ch. 4, 11).
 - Contested-citation check: when an article leans on a secondary source (e.g., a famous
   review), check how the field actually received that source.
 
@@ -278,6 +303,12 @@ refresh can change the checklist without touching the skill. Schedule in `evergr
   otherwise it is absence of evidence relabelled, the coverage form of the §3 equivalence point.
 - Counting hits. A claim backed by a list of agreeing studies, with no systematic review and no
   word on the studies that disagree, is selection; look for the review before crediting the list.
+- Number not in the source. If the article's headline figure does not appear in the source's own
+  summary, find where it came from. Trust the summary unless the article shows its arithmetic; a
+  "doubling" re-derived from one table row is a mined number (§5).
+- Commissioned stories. "Scientists have found the formula for the perfect X" and sponsor-run
+  surveys are PR with no study behind them; say so and stop instead of appraising (ch. 12). Check
+  odd samples too: "70% of women" may mean 70% of one website's self-selected visitors (ch. 14).
 - Diff the preprint against the journal version. When a preprint exists, compare title and
   conclusion. Softening during review ("increases" to "is associated with") is a green flag for the
   paper and hands you the exact claim the coverage should not be making. Also check whether a
@@ -308,6 +339,9 @@ refresh can change the checklist without touching the skill. Schedule in `evergr
 ## Changelog
 Full history with reasons: [CHANGELOG.md](../CHANGELOG.md). The C- ids below were assigned before the
 skill was published; the public changelog summarises them under its first entry.
+- 2026-11-19: §3 surrogate and lab-to-life leaps; expectancy. §4 completers only, ideal patients. §5
+  clustering; mined number. §6 harms parity; body of evidence. §7 number not in the source;
+  commissioned stories. Source: C-20261119-1.
 - 2026-11-18: §3 testable as stated; §5 replication fidelity; §6 manufactured doubt. Source:
   C-20261118-1.
 - 2026-11-14: §3 rival explanations before the verdict. §7 rescue after a failed test; "no
