@@ -9,6 +9,7 @@ Define each appraisal term the first time it appears in a review, in a clause, t
 - Design and bias: confidence interval, statistical power, preregistration, equivalence testing, non-inferiority margin, spin delta, winner's curse, differential attrition, practice effect, regression to the mean, target engagement, hold-out outcome, residual confounding, familial confounding, sibling comparison, negative-control exposure, exposure misclassification, post-treatment control, range restriction.
 - Effect sizes and tests: Cohen's d and dz, standard error, per-SD and log-point coefficients, risk ratio and hazard ratio, absolute risk, Bonferroni correction, type I error, d′ (d-prime) and response criterion.
 - Measurement: factor loading, composite index, crystallized vs fluid intelligence, proxy measure, single-item outcome.
+- Reasoning traps: positive predictive value and base rate, number needed to treat (and to harm), collider and selection bias, out-of-sample (in-sample fit), GRIM test.
 - Evidence synthesis: umbrella review, AMSTAR-2, corrected covered area (CCA), GRADE certainty.
 
 Add whatever else the particular review turns on.
@@ -36,7 +37,7 @@ Before the bottom line, name the strongest objection a careful reader would rais
 
 ## Translating the effect
 
-Turn the headline coefficient into something a reader can feel: a percentile of the exposure plus a concrete unit (percent, years, currency, absolute risk per 1,000 people). Label it as your arithmetic on their numbers, not a number from the paper. Give every risk result as a natural frequency too: "about 2 more cases per 1,000 people like you over 10 years", with the baseline beside it. People, experts included, judge risk better that way than from a relative percentage, which is the biggest number and the one coverage picks (Goldacre, Bad Science, ch. 14). When no magnitude is reachable (paywall, the outlet reported only "significant"), say so and don't invent one.
+Turn the headline coefficient into something a reader can feel: a percentile of the exposure plus a concrete unit (percent, years, currency, absolute risk per 1,000 people). Label it as your arithmetic on their numbers, not a number from the paper. Give every risk result as a natural frequency too: "about 2 more cases per 1,000 people like you over 10 years", with the baseline beside it. People, experts included, judge risk better that way than from a relative percentage, which is the biggest number and the one coverage picks (Goldacre, Bad Science, ch. 14). For a treatment, give the number needed to treat with its time frame and the harms beside it: a population win can be a 1-in-83 bet for one person (Wilson, How Medicine Works, ch. 6). For a screening test, give the positive predictive value: out of every 100 people who test positive, how many have the condition. Gloss a p-value as the chance of data this extreme if nothing were going on, never the chance the finding is a fluke. When no magnitude is reachable (paywall, the outlet reported only "significant"), say so and don't invent one.
 
 ## When the evidence is "it worked for me"
 

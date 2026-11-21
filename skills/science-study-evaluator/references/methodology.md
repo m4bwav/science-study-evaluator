@@ -1,6 +1,6 @@
 # Study Appraisal Methodology (living document)
 
-Version: 2026-11-19.1 · Read by [SKILL.md](../SKILL.md) at Step 1 of every appraisal. Kept separate so a
+Version: 2026-11-21.1 · Read by [SKILL.md](../SKILL.md) at Step 1 of every appraisal. Kept separate so a
 refresh can change the checklist without touching the skill. Schedule in `evergreen.json`, findings in
 [RESEARCH.md](../RESEARCH.md), every change in [CHANGELOG.md](../CHANGELOG.md); retrieval routes in
 [fetch-routes.md](fetch-routes.md).
@@ -37,6 +37,17 @@ refresh can change the checklist without touching the skill. Schedule in `evergr
   for later papers on the same trial or cohort before writing; a companion paper the article
   ignores belongs in the review.
 
+- Fraud screen when the result is too good. Single centre, an effect far outside the field's usual
+  range, and a preprint or low-scrutiny venue together raise the prior that the data are invented
+  (Wilson 2023 ch. 9, "fraud hates a crowd"). Then ask the question out loud and check PubPeer,
+  raw-data availability and the authors' field and publication record (ORCID, Scholar). Where
+  integer-scale means and n are printed, run `paper_meta.py grim <mean> <n>` (GRIM, Brown and
+  Heathers 2017); with raw data, look for duplicate rows and shared birthdays. Each is a screen,
+  never proof. Code `fraud-prior-high`.
+- Zombie number. A load-bearing statistic cited with no primary source: follow the citation chain
+  to its first appearance and record what it measured and when; a chain that ends nowhere is
+  reported as such (Bergstrom and West 2020 ch. 5).
+
 ## 2. Venue
 - Peer-reviewed journal vs preprint vs conference abstract. Preprint ≠ wrong, but unvetted.
 - Journal legitimacy: indexed (MEDLINE/Scopus)? Reputable publisher? Predatory signs:
@@ -54,6 +65,13 @@ refresh can change the checklist without touching the skill. Schedule in `evergr
 - RCTs: CONSORT 2025 statement (30 items; new: prespecification changes, harms, data
   sharing, intervention delivery, patient involvement). Prospective registration? Primary
   outcome switching?
+- RCT integrity: Table 1 with only one or two baseline variables, or an imbalance larger than
+  chance would give, and arms of very different size with no declared ratio (who was randomised:
+  patients, wards, sites?) are fraud or mislabel screens for implausible results, not routine
+  verdict factors; CONSORT advises against significance tests on baseline tables (Wilson 2023
+  ch. 9). "Open randomized trial and an observational study" is graded as observational. Stopped
+  early for benefit: treat the effect as an upper estimate; truncated trials overstate it (Bassler
+  et al., JAMA 2010). Codes `sparse-table-1`, `arm-ratio-unexplained`, `stopped-early`.
 - Non-randomized: confounding control, selection (treatment-seeking vs population-based),
   reverse causation. Tools: Cochrane RoB 2 (RCTs), ROBINS-I v2 (2025), GRADE for
   body-of-evidence certainty (GRADE Book supersedes the Handbook by end of 2026;
@@ -189,6 +207,17 @@ refresh can change the checklist without touching the skill. Schedule in `evergr
   principle; are this result and this headline fair instances of it. The proxy alert in §4 is the
   last test applied to one case.
 
+- Prediction and risk models (risk scores, forecasts, ML classifiers): is performance reported on
+  data the model never saw (temporal or external validation)? AUC or R-squared on the training data
+  rewards fitting noise (Silver 2012 ch. 5); count candidate predictors against events. Reporting
+  standard: TRIPOD+AI (Collins et al., BMJ 2024; replaces TRIPOD 2015). For a claim that a model
+  detects a trait, ask what in the training records differs between classes apart from the trait
+  (Bergstrom and West 2020 ch. 3). Code `in-sample-only`.
+- Adjustment set. "Adjusted for everything" can add bias: controlling a common effect of exposure
+  and outcome (a collider) or a mediator opens or closes the wrong path (Pearl 2018 ch. 4). Ask
+  whether the authors justify each covariate or publish a causal diagram (DAG, a green flag); do
+  not try to derive identifiability yourself. Code `adjustment-set-unjustified`.
+
 ## 4. Sample & measurement
 - N per group, especially controls. In pooled/multi-cohort studies, check whether the
   flashiest number comes from the smallest or most biased subsample.
@@ -235,6 +264,14 @@ refresh can change the checklist without touching the skill. Schedule in `evergr
   runs. Losing the exposed people whose lives went worst turns a null into a positive finding
   with nobody doing anything wrong.
 
+- Selected on a common effect? Hospital patients, survivors who reached care, survey responders,
+  users still on an app: when both exposure and outcome affect who got into the sample, an
+  association can appear or vanish with no causal link (Berkson; Pearl 2018 ch. 6). Name the
+  selection step and which way it bends the result. Code `collider-selection`.
+- Outside the observed range. Name the range of the exposure (dose, age, era, price) the sample
+  actually covered; a headline beyond it rests on n = 0 for that claim, however big the study
+  (Silver 2012 ch. 1). Code `outside-observed-range`.
+
 ## 5. Statistics
 - Effect sizes with CIs, not just p-values. Tiny d with huge N = real but possibly trivial.
 - Multiple-comparisons handling; subgroup fishing; composite indices that amplify weak
@@ -261,6 +298,12 @@ refresh can change the checklist without touching the skill. Schedule in `evergr
   Don't invent a translation.
 - Quantity words in the article ("many", "most", "significantly") with no number beside them are a
   flag, and so is precision finer than the design can support (decimals on a 40-person survey).
+
+- Test accuracy is not PPV. For a screening or diagnostic claim, get the base rate in the tested
+  group, sensitivity and specificity, and run `paper_meta.py ppv <prevalence> <sens> <spec>`: at a
+  low base rate most positives are false (Silver 2012 ch. 8). Code `ppv-missing`.
+- Treatment benefit: run `paper_meta.py nnt <risk_control> <risk_treated>` and report NNT (or NNH)
+  with the time frame, next to the harms (Wilson 2023 ch. 6).
 
 ## 6. Interests
 - COI declarations vs author affiliations: a commercial affiliation with no matching
@@ -326,6 +369,41 @@ refresh can change the checklist without touching the skill. Schedule in `evergr
   The same goes for the author: a scholar whose books argue a thesis isn't conflicted in the
   financial sense, but it predicts which way the framing leans. Say it; don't grade it as a COI.
 
+- P-value reversed. "p = 0.01, so 99% sure it's real" or "only a 1 in 100 chance this is a fluke"
+  swaps the chance of the data given no effect for the chance of no effect given the data
+  (Bergstrom and West 2020 ch. 9). Code `p-reversed`.
+- Narrowed comparison. "A has more X than B" where the study measured one subtype of X, or only A
+  (Bergstrom and West 2020 ch. 10). Code `narrowed-comparison`.
+- Survivor-only null. Outcomes recorded only for cases that survived an earlier stage measure what
+  happens after it; a null reported as "X doesn't help" climbed the ladder (Pearl 2018 ch. 9).
+  Code `survivor-null`.
+
+### Figures (when the paper or article shows a chart)
+Name each failure and give the corrected reading ("the bar looks 4x taller; the numbers say 1.8x").
+- `no-source`: no named data source, or the counted category is undefined (Cairo 2019 ch. 3).
+- `fig-truncated-bars`: bar or area baseline above zero; compare visual ratio with true ratio (Few
+  2006 p. 56; Knaflic 2015 ch. 2). Lines may start near the data.
+- `cause-aligned-crop`: time axis starting at the event the caption credits; also uneven time
+  intervals on x (Cairo ch. 2, 6; Knaflic ch. 2).
+- `count-no-denominator`: counts across groups of very different size; ask for rates and the
+  reference group (Cairo ch. 4).
+- `pct-vs-points`: a change between two percentages given as "X%" without saying points or
+  relative (Cairo ch. 3).
+- `band-no-coverage`, `crisp-overlap`: an interval with no stated coverage, or estimates shown with
+  no interval at all (Cairo ch. 5).
+- `mean-only-skewed`: one average for a skewed outcome such as income (Cairo ch. 4).
+- `ecological-claim`: individual conclusions from region or country aggregates; check a split by
+  a confounder for a reversal (Cairo ch. 6).
+- `causal-caption`: causes, drives, boosts over an observational chart (Cairo ch. 6).
+- `fig-dual-axis-link`: two axes implying a link the data do not show (Knaflic ch. 2).
+- `fig-area-size`, `fig-3d-distortion`: circles or bubbles compared by size (readers misjudge area),
+  3D or tilted shapes that hide or distort values, a pie whose slices are not one whole (Few
+  pp. 47-55, 72; Knaflic ch. 2).
+- `fig-stacked-middle`: a change claimed in a middle stacked segment, which the eye cannot judge
+  (Few p. 116).
+- `fig-red-green`: the key contrast carried by red versus green alone (Few pp. 61, 132).
+- `fig-selective-highlight`: a highlight that hides contrary points (Knaflic ch. 4).
+
 ## 8. Verdict scale
 
 | Verdict | Meaning |
@@ -339,6 +417,9 @@ refresh can change the checklist without touching the skill. Schedule in `evergr
 ## Changelog
 Full history with reasons: [CHANGELOG.md](../CHANGELOG.md). The C- ids below were assigned before the
 skill was published; the public changelog summarises them under its first entry.
+- 2026-11-21: §1 fraud screen, zombie number. §3 RCT integrity, stopped early, prediction models,
+  adjustment set. §4 collider selection, observed range. §5 PPV, NNT. §7 p reversed, narrowed
+  comparison, survivor null; Figures block. Source: C-20261121-1.
 - 2026-11-19: §3 surrogate and lab-to-life leaps; expectancy. §4 completers only, ideal patients. §5
   clustering; mined number. §6 harms parity; body of evidence. §7 number not in the source;
   commissioned stories. Source: C-20261119-1.

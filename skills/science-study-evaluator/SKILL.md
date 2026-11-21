@@ -2,7 +2,7 @@
 name: science-study-evaluator
 description: "Critically appraise a scientific study and the news coverage around it: verify the citation, read the paper itself, check conflicts of interest, measure how far the headline outruns the findings, and give a verdict (Solid, Real but overhyped, Weak, Junk/predatory, Fabricated/misattributed) with the reasoning explained in plain language. Use whenever the user shares a paper, DOI, PubMed link, preprint, press release or news article about research and asks whether it is legit, real, overhyped, junk or worth believing: 'is this study legit?', 'does this paper actually show that?', 'what's wrong with this research?', 'fact-check this health article', 'should I trust this headline?', 'appraise this RCT', or pastes an r/science link. Also for 'refresh science-study-evaluator' and 'is science-study-evaluator stale'. Not for writing or peer-reviewing the user's own manuscript, running statistics on their data, or searching the literature for papers on a topic."
 metadata:
-  version: "0.5.0"
+  version: "0.6.0"
 ---
 
 # Science study evaluator
@@ -35,6 +35,7 @@ Read [references/methodology.md](references/methodology.md) and follow it. Whate
 4. **Interrogate the exposure before accepting its name.** For a factor score, index or composite, get the items and loadings and ask whether someone could score high without the behaviour the headline names; quote the items. A 10-word vocabulary quiz is crystallized knowledge, not "intelligence"; a single survey item standing in for a validated scale may measure something else too. Read the controls the same way: "persists after controlling for education" is fair when education is entered as years, "not reducible to education" is not.
 5. **On an uncontrolled before/after study, find the hold-out outcome.** Get the published protocol paper (it names the real primary outcome, usually compliance for a pilot, and often says the efficacy measures were not powered). Then find a measure theory says should not respond; if it moved, it is the artifact floor for everything measured beside it. Say separately which results survive a multiplicity correction, and that surviving it is not surviving the missing control arm.
 6. **On an observational exposure-outcome claim, look for the designs that attack confounding.** Search for sibling comparisons and negative-control exposures (the same exposure at a time it cannot act). A negative control as strong as the real exposure says the signal comes from who gets exposed. Put those numbers next to the headline even when the article never mentions them. For an umbrella review, check overlap (CCA), the AMSTAR-2 ratings of what was pooled, and whether the quality-restricted estimates are reported with CIs.
+7. **Run the numbers and the figures.** For a test-accuracy claim run `PM ppv`, for a treatment benefit `PM nnt`, for a suspiciously clean table of integer-scale means `PM grim` (a screen, not proof). When the paper or article carries a chart, run methodology §7 Figures and name each failure with its code.
 
 ## Step 3: write it
 

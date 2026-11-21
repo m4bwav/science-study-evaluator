@@ -39,7 +39,7 @@ import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
 
-VERSION = "0.5.0"
+VERSION = "0.6.0"
 REPO = "https://github.com/m4bwav/science-study-evaluator"
 EUTILS = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils"
 EPMC = "https://www.ebi.ac.uk/europepmc/webservices/rest"
@@ -448,12 +448,73 @@ def render_text(res: dict) -> str:
     return "\n".join(o) + "\n"
 
 
+CALCS = ("nnt", "ppv", "grim")
+
+
+def nnt(risk_control: float, risk_treated: float) -> dict:
+    """Absolute and relative risk reduction and number needed to treat (or harm) from two event risks (0-1)."""
+    for r in (risk_control, risk_treated):
+        if not 0 <= r <= 1:
+            raise ValueError("risks are proportions between 0 and 1 (3.3% is 0.033)")
+    arr = risk_control - risk_treated
+    out = {"arr": arr, "rrr": (arr / risk_control) if risk_control else None}
+    out["nnt" if arr > 0 else "nnh"] = (1 / abs(arr)) if arr else None
+    return out
+
+
+def ppv(prevalence: float, sensitivity: float, specificity: float) -> dict:
+    """Share of positive and of negative results that are right, from base rate, sensitivity and specificity."""
+    for r in (prevalence, sensitivity, specificity):
+        if not 0 <= r <= 1:
+            raise ValueError("inputs are proportions between 0 and 1")
+    tp, fp = prevalence * sensitivity, (1 - prevalence) * (1 - specificity)
+    tn, fn = (1 - prevalence) * specificity, prevalence * (1 - sensitivity)
+    return {"ppv": tp / (tp + fp) if tp + fp else None, "npv": tn / (tn + fn) if tn + fn else None,
+            "per_1000_positive": round(1000 * (tp + fp)), "per_1000_true_positive": round(1000 * tp)}
+
+
+def grim(mean: str, n: int, items: int = 1) -> dict:
+    """GRIM screen (Brown and Heathers 2017): can a mean of integer responses, reported to its decimals, come from n?"""
+    if n < 1 or items < 1:
+        raise ValueError("n and items must be positive integers")
+    decimals = len(mean.split(".")[1]) if "." in mean else 0
+    m, k = float(mean), n * items
+    lo, hi = int((m - 0.5 * 10 ** -decimals) * k) - 1, int((m + 0.5 * 10 ** -decimals) * k) + 2
+    hits = [t for t in range(lo, hi) if f"{t / k:.{decimals}f}" == f"{m:.{decimals}f}"]
+    return {"consistent": bool(hits), "nearest_sum": hits[0] if hits else None, "decimals": decimals}
+
+
+def calc_main(argv: list[str]) -> int:
+    p = argparse.ArgumentParser(prog=f"paper_meta.py {argv[0]}")
+    if argv[0] == "nnt":
+        p.add_argument("risk_control", type=float); p.add_argument("risk_treated", type=float)
+    elif argv[0] == "ppv":
+        p.add_argument("prevalence", type=float); p.add_argument("sensitivity", type=float)
+        p.add_argument("specificity", type=float)
+    else:
+        p.add_argument("mean"); p.add_argument("n", type=int)
+        p.add_argument("--items", type=int, default=1, help="items averaged per person (multi-item scale)")
+    a = vars(p.parse_args(argv[1:]))
+    try:
+        res = {"nnt": nnt, "ppv": ppv, "grim": grim}[argv[0]](**a)
+    except ValueError as e:
+        print(f"error: {e}", file=sys.stderr)
+        return 2
+    if argv[0] == "grim":
+        res["note"] = "screening only: rounding rules, missing data or a misreported n can explain a miss"
+    print(json.dumps(res, indent=2))
+    return 0
+
+
 def main(argv: list[str] | None = None) -> int:
     for stream in (sys.stdout, sys.stderr):
         try:
             stream.reconfigure(encoding="utf-8")  # accented author names on a Windows console
         except (AttributeError, ValueError):
             pass
+    argv = sys.argv[1:] if argv is None else argv
+    if argv and argv[0] in CALCS:
+        return calc_main(argv)
     p = argparse.ArgumentParser(prog="paper_meta.py", description=__doc__.split("\n\n")[0])
     p.add_argument("identifier", help="DOI, doi.org or article URL, PMID:123 or PMC123")
     p.add_argument("--refs", action="store_true")
