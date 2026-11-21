@@ -42,7 +42,19 @@ Best sources (primary first): EQUATOR Network (reporting guidelines index), cons
 
 Newest first. One entry per material finding; a quiet refresh gets one entry saying so.
 
-### R-20261119-1 · 2026-11-19 · Book: Bad Science (Goldacre, 2008), trial tricks, bad stats, media
+### R-20261121-2 · 2026-11-21 · Outside-book sources confirmed before adoption
+- Summary: TRIPOD+AI (Collins et al., BMJ 2024;385:e078378) is the 27-item reporting guideline for prediction models using regression or ML and supersedes TRIPOD 2015. Bassler et al. (JAMA 2010;303(12):1180-7) found trials stopped early for benefit report larger effects than non-truncated trials, independent of stopping rules, most in small trials. GRIM (Brown and Heathers, Soc Psychol Personal Sci 2017) checks that a mean of integer data is possible for its n. E-value not checked: dropped as outside this change.
+- Sources: pubmed.ncbi.nlm.nih.gov/38626948; jamanetwork.com/journals/jama/article-abstract/185591; journals.sagepub.com/doi/abs/10.1177/1948550616673876 (checked 2026-11-21)
+- Magnitude: 0.15
+- Applied: C-20261121-1
+
+### R-20261121-1 · 2026-11-21 · Books: charts (Few, Knaflic, Cairo) and reasoning (Silver, Pearl, Bergstrom and West, Wilson)
+- Summary: Read for gaps. Adds named chart failures (truncated bars, cropped time axis, counts without denominators, percent vs points, bands without coverage, area and 3D distortion, dual axes, ecological claims, causal captions); PPV for test claims; out-of-sample validation for prediction models; the observed exposure range; collider selection and survivor-only nulls; justified adjustment sets; p-value reversal; narrowed comparisons; origin tracing for zombie numbers; fraud screens; NNT. Book rules, unverified.
+- Sources: Few, Information Dashboard Design, 2006, ch. 3-5; Knaflic, Storytelling with Data, 2015, ch. 2, 4; Cairo, How Charts Lie, 2019, ch. 2-6; Silver, The Signal and the Noise, 2012, ch. 1, 5, 8; Pearl and Mackenzie, The Book of Why, 2018, ch. 4, 6, 9; Bergstrom and West, Calling Bullshit, 2020, ch. 3, 5, 9, 10; Wilson, How Medicine Works and When It Doesn't, 2023, ch. 6, 9
+- Magnitude: 0.4 (checklist items added; not a scheduled check)
+- Applied: C-20261121-1
+
+ · 2026-11-19 · Book: Bad Science (Goldacre, 2008), trial tricks, bad stats, media
 - Summary: Read for gaps. Adds: surrogate outcome and lab-to-life leaps; expectancy in uncontrolled pilots; completers-only analysis and ideal patients; clustering; a number mined from many comparisons when the source's summary says no change; natural frequencies; harms reported less prominently than benefits; publication bias, duplicate publication and the quality-effect gradient; commissioned formula and survey stories; regression to the mean for "it worked for me". Cautions: written before routine trial registration; funnel plots are weak below about ten studies; the quality gradient comes from one homeopathy analysis. Book rules, unverified on our own appraisals.
 - Sources: Ben Goldacre, Bad Science, Fourth Estate, 2008, ch. 4-8, 11-14
 - Magnitude: 0.2 (checklist items added; not a scheduled check)

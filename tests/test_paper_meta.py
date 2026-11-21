@@ -222,6 +222,39 @@ class Cli(unittest.TestCase):
             pm.Fetcher = orig
 
 
+class Calcs(unittest.TestCase):
+    def test_nnt_sprint(self):
+        r = pm.nnt(0.045, 0.033)
+        self.assertAlmostEqual(r["nnt"], 83.3, places=1)
+        self.assertAlmostEqual(r["rrr"], 0.267, places=3)
+
+    def test_nnh_when_worse(self):
+        self.assertIn("nnh", pm.nnt(0.02, 0.04))
+
+    def test_ppv_low_base_rate(self):
+        r = pm.ppv(0.01, 0.9, 0.91)
+        self.assertLess(r["ppv"], 0.1)
+
+    def test_grim_flags_impossible_mean(self):
+        self.assertFalse(pm.grim("5.19", 28)["consistent"])
+
+    def test_grim_passes_possible_mean(self):
+        self.assertTrue(pm.grim("5.18", 28)["consistent"])
+        self.assertTrue(pm.grim("3.48", 25, 2)["consistent"])
+
+    def test_cli_and_bad_input(self):
+        out = io.StringIO()
+        with redirect_stdout(out):
+            self.assertEqual(pm.main(["nnt", "0.045", "0.033"]), 0)
+        self.assertIn('"nnt"', out.getvalue())
+        with redirect_stdout(io.StringIO()):
+            sys.stderr, err = io.StringIO(), sys.stderr
+            try:
+                self.assertEqual(pm.main(["ppv", "5", "0.9", "0.9"]), 2)
+            finally:
+                sys.stderr = err
+
+
 @unittest.skipUnless(os.environ.get("SSE_LIVE"), "set SSE_LIVE=1 for the live smoke test")
 class Live(unittest.TestCase):
     def test_real_paper(self):
